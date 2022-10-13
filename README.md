@@ -5,8 +5,9 @@ The main changes include the following:
 1) A new metabolic model that includes 85 reactions in mice;
 2) New status files and MDV files for modeling;
 3) New substrate configuration;
-4) A multi-tissue model and corresponding status files and MDV files;
-5) ALL data required to reproduce a dietary fluxomics manuscript under review.
+4) New python execution files;
+5) A multi-tissue model and corresponding status files and MDV files;
+6) ALL data required to reproduce a dietary fluxomics manuscript under review.
 
 
 Below are the original readme file from the mfapy repository.
