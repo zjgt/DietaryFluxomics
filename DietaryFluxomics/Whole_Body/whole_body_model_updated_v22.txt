@@ -1,0 +1,637 @@
+#-------------------------------------------------------------------------------							
+# Name:        Example_3_MCF7_model.txt							
+#              Model definition file for Example 3 of mfapy							
+#							
+# Author:      Fumio_Matsuda							
+#							
+# Created:     12/06/2018							
+# Copyright:   (c) Fumio_Matsuda 2021							
+# Licence:     MIT license							
+#-------------------------------------------------------------------------------							
+//Reactions							
+r1001_SubsGlcPeri	SubsGlcPeri --> GlcPeri	SubsGlcPeri --> GlcPeri	ABCDEF --> ABCDEF	(kegg:SubsGlcPeri)	0	1000	
+r1002_SubsCO2	SubsCO2 --> CO2	SubsCO2 --> CO2	A --> A	(kegg:SubsCO2)	0	1000	
+r1003_SubsLacPeri	SubsLacPeri --> LacPeri	SubsLacPeri --> LacPeri	ABC --> ABC	(kegg:SubsLacPeri)	0	1000	
+r1004_SubsAcCOAmit	SubsAcCOAmit --> AcCOAmit	SubsAcCOAmit --> AcCOAmit	AB--> AB	(kegg:SubsAcCOAmit)	0	1000	
+r1005_SubsGly	SubsGly --> Gly	SubsGly --> Gly	ABC --> ABC	(kegg:SubsGly)	0	1000	
+r1006_SubsGln	SubsGln --> Gln	SubsGln --> Gln	ABCDE --> ABCDE	(kegg:SubsGln)	0	1000	
+r1007_SubsAla	SubsAla --> Ala	SubsAla --> Ala	ABC --> ABC	(kegg:SubsAla)	0	1000	
+r1008_SubsSer	SubsSer --> Ser	SubsSer --> Ser	ABC --> ABC	(kegg:SubsSer)	0	1000	
+r1009_SubsUridine	SubsUridine --> Uridine	SubsUridine --> Uridine	ABCDEFGHI --> ABCDEFGHI	(kegg:SubsUridine)	0	1000	
+r1010_SubsR5P	SubsR5P --> R5P	SubsR5P --> R5P	ABCDE --> ABCDE	(kegg:SubsR5P)	0	1000	
+r1011_SubsGlcCn	SubsGlcCn --> GlcCn	SubsGlcCn --> GlcCn	ABCDEF --> ABCDEF	(kegg:SubsGlcCn)	0	1000	
+r1013_SubsLacCn	SubsLacCn --> LacCn	SubsLacCn --> LacCn	ABC --> ABC	(kegg:SubsLacCn)	0	1000	
+r1015_GlcPeri_bbb	GlcPeri --> GlcCn	GlcPeri --> GlcCn	ABCDEF --> ABCDEF	(kegg:GlcExchange))	0	1000	
+r1016_GlcCn_bbb	GlcCn --> GlcPeri	GlcCn --> GlcPeri	ABCDEF --> ABCDEF	(kegg:GlcExchange))	0	1000	
+r1017_LacPeri_bbb	LacPeri --> LacCn	LacPeri --> LacCn	ABC --> ABC	(kegg:LacExchange))	0	1000	
+r1018_LacCn_bbb	LacCn --> LacPeri	LacCn --> LacPeri	ABC --> ABC	(kegg:LacExchange))	0	1000	
+r0001_Glc_liver_ex	GlcPeri --> Glcliver	GlcPeri --> Glcliver	ABCDEF --> ABCDEF	(kegg:Glc_liver_uptake)	0	500	
+r0002_CO2_liver_ex	CO2 --> CO2inliver	CO2 --> CO2inliver	A --> A	(kegg:CO2_liver_uptake)	0	500	
+r0003_Lac_liver_ex	LacPeri--> Lacliver	LacPeri --> Lacliver	ABC --> ABC	(kegg:Lac_liver_uptake)	0	500	
+r0004_AcCOAmit_liver_ex	AcCOAmit --> AcCOAmitliver	AcCOAmit --> AcCOAmitliver	AB--> AB	(kegg:AcCOAmit_liver_uptake)	0	500	
+r0005_Gly_liver_ex	Gly --> DHAPliver + {0.6}NADHliver	Gly --> DHAPliver	ABC --> ABC	(kegg:Gly_liver_uptake)	0	500	
+r0006_Gln_liver_ex	Gln --> Glnliver	Gln --> Glnliver	ABCDE --> ABCDE	(kegg:Gln_liver_uptake)	0	500	
+r0007_Ala_liver_ex	Ala --> Alaliver	Ala --> Alaliver	ABC --> ABC	(kegg:Ala_liver_uptake)	0	500	
+r0008_Ser_liver_ex	Ser --> Serliver	Ser --> Serliver	ABC --> ABC	(kegg:Ser_liver_uptake)	0	500	
+r0009_Uridine_liver_ex	Uridine --> Uridineliver	Uridine --> Uridineliver	ABCDEFGHI --> ABCDEFGHI	(kegg:Uridine_liver_uptake)	0	500	
+r0010_R5P_liver_ex	R5P --> R5Pliver	R5P --> R5Pliver	ABCDE --> ABCDE	(kegg:R5P_liver_uptake)	0	500	
+r0011_Glc_liver_ex	Glcliver --> GlcPeri	Glcliver --> GlcPeri	ABCDEF --> ABCDEF	(kegg:Glc_liver_excretion)	0	500	
+r0012_CO2_liver_ex	CO2inliver --> CO2	CO2inliver --> CO2	A --> A	(kegg:CO2_liver_excretion)	0	500	
+r0013_Lac_liver_ex	Lacliver --> LacPeri	Lacliver --> LacPeri	ABC --> ABC	(kegg:Lac_liver_excretion)	0	500	
+r0014_AcCOAmit_liver_ex	AcCOAmitliver --> AcCOAmit	AcCOAmitliver --> AcCOAmit	AB--> AB	(kegg:AcCOAmit_liver_excretion)	0	500	
+r0015_Gly_liver_ex	DHAPliver --> Gly	DHAPliver --> Gly	ABC --> ABC	(kegg:Gly_liver_excretion)	0	500	
+r0016_Gln_liver_ex	Glnliver --> Gln	Glnliver --> Gln	ABCDE --> ABCDE	(kegg:Gln_liver_excretion)	0	500	
+r0017_Ala_liver_ex	Alaliver --> Ala	Alaliver --> Ala	ABC --> ABC	(kegg:Ala_liver_excretion)	0	500	
+r0018_Ser_liver_ex	Serliver --> Ser	Serliver --> Ser	ABC --> ABC	(kegg:Ser_liver_excretion)	0	500	
+r0019_Uridine_liver_ex	Uridineliver --> Uridine	Uridineliver --> Uridine	ABCDEFGHI --> ABCDEFGHI	(kegg:Uridine_liver_excretion)	0	500	
+r0020_R5P_liver_ex	R5Pliver --> R5P	R5Pliver --> R5P	ABCDE --> ABCDE	(kegg:R5P_liver_excretion)	0	500	
+r0031_G6P_liver_BIO	G6Pliver --> G6PBiomassliver	nd	nd	(kegg:BiomassG6P_liver)	0	100	
+r0032_UMP_liver_BIO	UMPliver --> UMPBiomassliver	nd	nd	(kegg:BiomassUMP_liver)	0	100	
+r0033_DHAP_liver_BIO	DHAPliver --> DHAPBiomassliver	nd	nd	(kegg:BiomassDHAP_liver)	0	100	
+r0034_Ser_liver_BIO	Serliver --> SerBiomassliver	nd	nd	(kegg:BiomassSer_liver)	0	100	
+r0035_Ala_liver_BIO	Alaliver --> AlaBiomassliver	nd	nd	(kegg:BiomassAla_liver)	0	100	
+r0036_Asp_liver_BIO	Aspliver --> AspBiomassliver	nd	nd	(kegg:BiomassAsp_liver)	0	100	
+r0037_Glu_liver_BIO	Gluliver --> GluBiomassliver	nd	nd	(kegg:BiomassGlu_liver)	0	100	
+r0038_Gln_liver_BIO	Glnliver --> GlnBiomassliver	nd	nd	(kegg:BiomassGln_liver)	0	100	
+r0039_FA_liver_BIO	AcCOAcytliver + {2}NADPHliver --> FABiomassliver	nd	nd	(kegg:BiomassFA_liver)	0	100	
+r0040_ATP_liver_BIO	ATPliver --> ATPBiomassliver	nd	nd	(kegg:BiomassATP_liver)	0	100	
+r0041_NADPH_liver_BIO	NADPHliver --> NADPHBiomassliver	nd	nd	(kegg:BiomassNADPH_liver)	0	100	
+r0042_AcAsp_liver_BIO	AcAspliver --> AcAspBiomassliver	nd	nd	(kegg:BiomassAcAsp_liver)	0	100	
+r0043_CO2_liver_BIO	CO2inliver --> CO2Biomassliver	nd	nd	(kegg:BiomassCO2_liver)	0	1000	
+r0060_hk_liver	Glcliver + ATPliver --> G6Pliver	Glcliver --> G6Pliver	ABCDEF --> ABCDEF	(kegg:R02848)	0	1000	
+r0061_pgi_liver	G6Pliver --> F6Pliver	G6Pliver --> F6Pliver	ABCDEF --> ABCDEF	(kegg:R00771f)	0	1000	
+r0062_pgi_liver	F6Pliver --> G6Pliver	F6Pliver --> G6Pliver	ABCDEF --> ABCDEF	(kegg:R00771r)	0	1000	
+r0063_pfk_liver	F6Pliver + ATPliver --> FBPliver	F6Pliver --> FBPliver	ABCDEF --> ABCDEF	(kegg:R00756)	0	1000	
+r0065_fba_liver	FBPliver --> DHAPliver + GAPliver	FBPliver --> DHAPliver + GAPliver	ABCDEF --> CBA + DEF	(kegg:R01068f)	0	1000	
+r0066_fba_liver	DHAPliver + GAPliver --> FBPliver	DHAPliver + GAPliver --> FBPliver	CBA + DEF --> ABCDEF	(kegg:R01068r)	0	1000	
+r0067_tpi_liver	DHAPliver --> GAPliver	DHAPliver --> GAPliver	ABC --> ABC	(kegg:R01015f)	0	1000	
+r0068_tpi_liver	GAPliver --> DHAPliver	GAPliver --> DHAPliver	ABC --> ABC	(kegg:R01015r)	0	1000	
+r0069_gapdh_liver	GAPliver--> m3PGliver + NADHliver + ATPliver	GAPliver --> m3PGliver	ABC --> ABC	(kegg:R01061f)	0	1000	
+r0070_gapdh_liver	m3PGliver + NADHliver + ATPliver --> GAPliver	m3PGliver --> GAPliver	ABC --> ABC	(kegg:R01061r)	0	1000	
+r0071_peph_liver	m3PGliver --> PEPliver	m3PGliver --> PEPliver	ABC --> ABC	(kegg:R01512f)	0	1000	
+r0072_peph_liver	PEPliver --> m3PGliver	PEPliver --> m3PGliver	ABC --> ABC	(kegg:R01512r)	0	1000	
+r0073_pk_liver	PEPliver --> Pyrliver + ATPliver	PEPliver --> Pyrliver	ABC --> ABC	(kegg:R00200)	0	1000	
+r0074_pyrdh_liver	Pyrliver --> AcCOAmitliver + CO2inliver + NADHliver	Pyrliver --> AcCOAmitliver + CO2inliver	ABC --> BC + A	(kegg:R01196)	0	1000	
+r0075_cs_liver	AcCOAmitliver + Oxaliver --> Citliver	AcCOAmitliver + Oxaliver --> Citliver	AB + CDEF --> FEDBAC	(kegg:R00351)	0	1000	
+r0077_idh_liver	Citliver --> aKGliver + CO2inliver + NADHliver	Citliver --> aKGliver + CO2inliver	ABCDEF --> ABCDE + F	(kegg:R00709f)	0	1000	
+r0078_idh_liver	aKGliver + CO2inliver + NADHliver --> Citliver	aKGliver + CO2inliver --> Citliver	ABCDE + F --> ABCDEF	(kegg:R00709r)	0	1000	
+r0079_akgdh_liver	aKGliver --> Sucliver + CO2inliver + ATPliver + NADHliver	aKGliver --> Sucliver + CO2inliver	ABCDE --> BCDE + A	(kegg:R01197)	0	1000	
+r0081_sdh_liver	Sucliver --> Fumliver + {0.6}NADHliver	Sucliver --> Fumliver	ABCD --> ABCD	(kegg:R02164f)	0	1000	
+r0082_sdh_liver	Fumliver + {0.6}NADHliver --> Sucliver	Fumliver --> Sucliver	ABCD --> ABCD	(kegg:R02164r)	0	1000	
+r0083_fh_liver	Fumliver --> Malliver	Fumliver --> Malliver	ABCD --> ABCD	(kegg:R01082f)	0	1000	
+r0084_fh_liver	Malliver --> Fumliver	Malliver --> Fumliver	ABCD --> ABCD	(kegg:R01082r)	0	1000	
+r0085_mdh_liver	Malliver --> Oxaliver + NADHliver	Malliver --> Oxaliver	ABCD --> ABCD	(kegg:R00343f)	0	1000	
+r0086_mdh_liver	Oxaliver + NADHliver --> Malliver	Oxaliver --> Malliver	ABCD --> ABCD	(kegg:R00343r)	0	1000	
+r0087_MAL_liver_ex	Malliver --> Malcytliver	Malliver --> Malcytliver	ABCD --> ABCD	(kegg:MAL_cyt)	0	1000	
+r0088_MAL_liver_ex	Malcytliver --> Malliver	Malcytliver --> Malliver	ABCD --> ABCD	(kegg:MAL_cyt)	0	1000	
+r0089_mdh_liver_cyt	Malcytliver --> Oxacytliver + NADHliver	Malcytliver --> Oxacytliver	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000	
+r0090_mdh_liver_cyt	Oxacytliver + NADHliver --> Malcytliver	Oxacytliver --> Malcytliver	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000	
+r0091_pc_liver	Pyrliver + CO2inliver + ATPliver --> Oxaliver	Pyrliver + CO2inliver --> Oxaliver	ABC + D --> ABCD	(kegg:R00344)	0	1000	
+r0092_pck1_liver	Oxacytliver --> PEPliver	Oxacytliver --> PEPliver	ABCD --> ABC	(kegg: R00431cyto)	0	1000	
+r0093_pck2_liver	Oxaliver --> PEPliver	Oxaliver --> PEPliver	ABCD  --> ABC	(kegg:R00431mito)	0	1000	
+r0094_fbp_liver	FBPliver --> F6Pliver	FBPliver --> F6Pliver	ABCDEF --> ABCDEF	(kegg:R00762)	0	1000	
+r0095_g6pc_liver	G6Pliver --> Glcliver	G6Pliver --> Glcliver	ABCDEF --> ABCDEF	(kegg:R00303)	0	1000	
+r0099_mae_liver	Malliver --> Pyrliver + CO2inliver + NADPHliver	Malliver --> Pyrliver + CO2inliver	ABCD --> ABC + D	(kegg:R00216)	0	1000	
+r0101_g6pdh_liver	G6Pliver --> m6PGliver + NADPHliver	G6Pliver --> m6PGliver	ABCDEF --> ABCDEF	(kegg:R00835)	0	1000	
+r0102_pgd_liver	m6PGliver --> Ru5Pliver + CO2inliver + NADPHliver	m6PGliver --> Ru5Pliver + CO2inliver	ABCDEF --> BCDEF + A	(kegg:R01528)	0	1000	
+r0103_ri_liver	Ru5Pliver --> R5Pliver	Ru5Pliver --> R5Pliver	ABCDE --> ABCDE	(kegg:R01056f)	0	1000	
+r0104_ri_liver	R5Pliver --> Ru5Pliver	R5Pliver --> Ru5Pliver	ABCDE --> ABCDE	(kegg:R01056r)	0	1000	
+r0105_rbe_liver	Ru5Pliver --> Xu5Pliver	Ru5Pliver --> Xu5Pliver	ABCDE --> ABCDE	(kegg:R01529f)	0	1000	
+r0106_rbe_liver	Xu5Pliver --> Ru5Pliver	Xu5Pliver --> Ru5Pliver	ABCDE --> ABCDE	(kegg:R01529r)	0	1000	
+r0107_tkt1_liver	R5Pliver + Xu5Pliver --> S7Pliver + GAPliver	R5Pliver + Xu5Pliver --> S7Pliver + GAPliver	ABCDE + FGHIJ --> FGABCDE + HIJ	(kegg:R01641f)	0	1000	
+r0108_tkt1_liver	GAPliver + S7Pliver --> Xu5Pliver + R5Pliver	GAPliver + S7Pliver --> Xu5Pliver + R5Pliver	HIJ + FGABCDE --> FGHIJ + ABCDE	(kegg:R01641r)	0	1000	
+r0109_tal_liver	GAPliver + S7Pliver --> F6Pliver + E4Pliver	GAPliver + S7Pliver --> F6Pliver + E4Pliver	ABC + DEFGHIJ --> DEFABC + GHIJ	(kegg:R08575f)	0	1000	
+r0110_tal_liver	E4Pliver + F6Pliver --> S7Pliver + GAPliver	E4Pliver + F6Pliver --> S7Pliver + GAPliver	GHIJ + DEFABC --> DEFGHIJ + ABC	(kegg:R08575r)	0	1000	
+r0111_tkt2_liver	E4Pliver + Xu5Pliver --> F6Pliver + GAPliver	E4Pliver + Xu5Pliver --> F6Pliver + GAPliver	ABCD + EFGHI --> EFABCD + GHI	(kegg:R01067f)	0	1000	
+r0112_tkt2_liver	GAPliver + F6Pliver --> Xu5Pliver + E4Pliver	GAPliver + F6Pliver --> Xu5Pliver + E4Pliver	GHI + EFABCD --> EFGHI + ABCD	(kegg:R01067r)	0	1000	
+r0113_cad_liver	Aspliver + CO2inliver + R5Pliver --> UMPliver + CO2	Aspliver + CO2inliver + R5Pliver --> UMPliver + CO2	ABCD + E + FGHIJ --> BCDEFGHIJ + A	(kegg:R01397)	0	100	
+r0114_nt_liver	UMPliver --> Uridineliver	UMPliver --> Uridineliver	ABCDEFGHI --> ABCDEFGHI	(kegg:R00963)	0	100	
+r0115_urk_liver	Uridineliver --> UMPliver	Uridineliver --> UMPliver	ABCDEFGHI --> ABCDEFGHI	(kegg:R00964)	0	100	
+r0121_ldh_liver	Pyrliver + NADHliver --> Lacliver	Pyrliver --> Lacliver	ABC --> ABC	(kegg:R00703f)	0	1000	
+r0122_ldh_liver	Lacliver --> Pyrliver + NADHliver	Lacliver --> Pyrliver	ABC --> ABC	(kegg:R00703r)	0	1000	
+r0123_phgdh_liver	m3PGliver --> Serliver + NADHliver	m3PGliver --> Serliver	ABC --> ABC	(kegg:R01513)	0	1000	
+r0124_sal_liver	Serliver --> Pyrliver	Serliver --> Pyrliver	ABC --> ABC	(kegg:R00220)	0	1000	
+r0125_gptm_liver	Pyrliver --> Alaliver	Pyrliver --> Alaliver	ABC --> ABC	(kegg:R00258f)	0	1000	
+r0126_gpt_liver	Alaliver --> Pyrliver	Alaliver --> Pyrliver	ABC --> ABC	(kegg:R00258r)	0	1000	
+r0127_got_liver	Oxacytliver --> Aspliver	Oxacytliver --> Aspliver	ABCD --> ABCD	(kegg:R00355f)	0	1000	
+r0129_gludh_liver	aKGliver + NADPHliver --> Gluliver	aKGliver --> Gluliver	ABCDE --> ABCDE	(kegg:R00243r)	0	1000	
+r0130_gludh_liver	Gluliver --> aKGliver + NADPHliver	Gluliver --> aKGliver	ABCDE --> ABCDE	(kegg:R00243f)	0	1000	
+r0131_glul_liver	Gluliver --> Glnliver	Gluliver --> Glnliver	ABCDE --> ABCDE	(kegg:R00253))	0	1000	
+r0132_gls_liver	Glnliver --> Gluliver	Glnliver --> Gluliver	ABCDE --> ABCDE	(kegg:R00256)	0	1000	
+r0133_acl_liver	Citliver --> AcCOAcytliver + Oxacytliver	Citliver --> AcCOAcytliver + Oxacytliver	FEDBAC --> AB + CDEF	(kegg:R00352)	0	1000	
+r0135_aat_liver	AcCOAcytliver + Aspliver --> AcAspliver	AcCOAcytliver + Aspliver --> AcAspliver	AB + CDEF --> ABCDEF	(kegg:R00487)	0	1000	
+r0136_OXPHOS_liver	NADHliver -->{2.3}ATPliver	nd	nd	(kegg:ATPsynthesis)	0	1000	
+r0201_Glc_lung_ex	GlcPeri --> Glclung	GlcPeri --> Glclung	ABCDEF --> ABCDEF	(kegg:Glc_lung_uptake)	0	500	
+r0202_CO2_lung_ex	CO2 --> CO2inlung	CO2 --> CO2inlung	A --> A	(kegg:CO2_lung_uptake)	0	500	
+r0203_Lac_lung_ex	LacPeri --> Laclung	LacPeri --> Laclung	ABC --> ABC	(kegg:Lac_lung_uptake)	0	500	
+r0204_AcCOAmit_lung_ex	AcCOAmit --> AcCOAmitlung	AcCOAmit --> AcCOAmitlung	AB--> AB	(kegg:AcCOAmit_lung_uptake)	0	500	
+r0205_Gly_lung_ex	Gly --> DHAPlung + {0.6}NADHlung	Gly --> DHAPlung	ABC --> ABC	(kegg:Gly_lung_uptake)	0	500	
+r0206_Gln_lung_ex	Gln --> Glnlung	Gln --> Glnlung	ABCDE --> ABCDE	(kegg:Gln_lung_uptake)	0	500	
+r0207_Ala_lung_ex	Ala --> Alalung	Ala --> Alalung	ABC --> ABC	(kegg:Ala_lung_uptake)	0	500	
+r0208_Ser_lung_ex	Ser --> Serlung	Ser --> Serlung	ABC --> ABC	(kegg:Ser_lung_uptake)	0	500	
+r0209_Uridine_lung_ex	Uridine --> Uridinelung	Uridine --> Uridinelung	ABCDEFGHI --> ABCDEFGHI	(kegg:Uridine_lung_uptake)	0	500	
+r0210_R5P_lung_ex	R5P --> R5Plung	R5P --> R5Plung	ABCDE --> ABCDE	(kegg:R5P_lung_uptake)	0	500	
+r0211_Glc_lung_ex	Glclung --> GlcPeri	Glclung --> GlcPeri	ABCDEF --> ABCDEF	(kegg:Glc_lung_excretion)	0	500	
+r0212_CO2_lung_ex	CO2inlung --> CO2	CO2inlung --> CO2	A --> A	(kegg:CO2_lung_excretion)	0	500	
+r0213_Lac_lung_ex	Laclung --> LacPeri	Laclung --> LacPeri	ABC --> ABC	(kegg:Lac_lung_excretion)	0	500	
+r0214_AcCOAmit_lung_ex	AcCOAmitlung --> AcCOAmit	AcCOAmitlung --> AcCOAmit	AB--> AB	(kegg:AcCOAmit_lung_excretion)	0	500	
+r0215_Gly_lung_ex	DHAPlung --> Gly	DHAPlung --> Gly	ABC --> ABC	(kegg:Gly_lung_excretion)	0	500	
+r0216_Gln_lung_ex	Glnlung --> Gln	Glnlung --> Gln	ABCDE --> ABCDE	(kegg:Gln_lung_excretion)	0	500	
+r0217_Ala_lung_ex	Alalung --> Ala	Alalung --> Ala	ABC --> ABC	(kegg:Ala_lung_excretion)	0	500	
+r0218_Ser_lung_ex	Serlung --> Ser	Serlung --> Ser	ABC --> ABC	(kegg:Ser_lung_excretion)	0	500	
+r0219_Uridine_lung_ex	Uridinelung --> Uridine	Uridinelung --> Uridine	ABCDEFGHI --> ABCDEFGHI	(kegg:Uridine_lung_excretion)	0	500	
+r0220_R5P_lung_ex	R5Plung --> R5P	R5Plung --> R5P	ABCDE --> ABCDE	(kegg:R5P_lung_excretion)	0	500	
+r0231_G6P_lung_BIO	G6Plung --> G6PBiomasslung	nd	nd	(kegg:BiomassG6P_lung)	0	100	
+r0232_UMP_lung_BIO	UMPlung --> UMPBiomasslung	nd	nd	(kegg:BiomassUMP_lung)	0	100	
+r0233_DHAP_lung_BIO	DHAPlung --> DHAPBiomasslung	nd	nd	(kegg:BiomassDHAP_lung)	0	100	
+r0234_Ser_lung_BIO	Serlung --> SerBiomasslung	nd	nd	(kegg:BiomassSer_lung)	0	100	
+r0235_Ala_lung_BIO	Alalung --> AlaBiomasslung	nd	nd	(kegg:BiomassAla_lung)	0	100	
+r0236_Asp_lung_BIO	Asplung --> AspBiomasslung	nd	nd	(kegg:BiomassAsp_lung)	0	100	
+r0237_Glu_lung_BIO	Glulung --> GluBiomasslung	nd	nd	(kegg:BiomassGlu_lung)	0	100	
+r0238_Gln_lung_BIO	Glnlung --> GlnBiomasslung	nd	nd	(kegg:BiomassGln_lung)	0	100	
+r0239_FA_lung_BIO	AcCOAcytlung + {2}NADPHlung --> FABiomasslung	nd	nd	(kegg:BiomassFA_lung)	0	100	
+r0240_ATP_lung_BIO	ATPlung --> ATPBiomasslung	nd	nd	(kegg:BiomassATP_lung)	0	100	
+r0241_NADPH_lung_BIO	NADPHlung --> NADPHBiomasslung	nd	nd	(kegg:BiomassNADPH_lung)	0	100	
+r0242_AcAsp_lung_BIO	AcAsplung --> AcAspBiomasslung	nd	nd	(kegg:BiomassAcAsp_lung)	0	100	
+r0243_CO2_lung_BIO	CO2inlung --> CO2Biomasslung	nd	nd	(kegg:BiomassCO2_lung)	0	1000	
+r0260_hk_lung	Glclung + ATPlung --> G6Plung	Glclung --> G6Plung	ABCDEF --> ABCDEF	(kegg:R02848)	0	1000	
+r0261_pgi_lung	G6Plung --> F6Plung	G6Plung --> F6Plung	ABCDEF --> ABCDEF	(kegg:R00771f)	0	1000	
+r0262_pgi_lung	F6Plung --> G6Plung	F6Plung --> G6Plung	ABCDEF --> ABCDEF	(kegg:R00771r)	0	1000	
+r0263_pfk_lung	F6Plung + ATPlung --> FBPlung	F6Plung --> FBPlung	ABCDEF --> ABCDEF	(kegg:R00756)	0	1000	
+r0265_fba_lung	FBPlung --> DHAPlung + GAPlung	FBPlung --> DHAPlung + GAPlung	ABCDEF --> CBA + DEF	(kegg:R01068f)	0	1000	
+r0266_fba_lung	DHAPlung + GAPlung --> FBPlung	DHAPlung + GAPlung --> FBPlung	CBA + DEF --> ABCDEF	(kegg:R01068r)	0	1000	
+r0267_tpi_lung	DHAPlung --> GAPlung	DHAPlung --> GAPlung	ABC --> ABC	(kegg:R01015f)	0	1000	
+r0268_tpi_lung	GAPlung --> DHAPlung	GAPlung --> DHAPlung	ABC --> ABC	(kegg:R01015r)	0	1000	
+r0269_gapdh_lung	GAPlung--> m3PGlung + NADHlung + ATPlung	GAPlung --> m3PGlung	ABC --> ABC	(kegg:R01061f)	0	1000	
+r0270_gapdh_lung	m3PGlung + NADHlung + ATPlung --> GAPlung	m3PGlung --> GAPlung	ABC --> ABC	(kegg:R01061r)	0	1000	
+r0271_peph_lung	m3PGlung --> PEPlung	m3PGlung --> PEPlung	ABC --> ABC	(kegg:R01512f)	0	1000	
+r0272_peph_lung	PEPlung --> m3PGlung	PEPlung --> m3PGlung	ABC --> ABC	(kegg:R01512r)	0	1000	
+r0273_pk_lung	PEPlung --> Pyrlung + ATPlung	PEPlung --> Pyrlung	ABC --> ABC	(kegg:R00200)	0	1000	
+r0274_pyrdh_lung	Pyrlung --> AcCOAmitlung + CO2inlung + NADHlung	Pyrlung --> AcCOAmitlung + CO2inlung	ABC --> BC + A	(kegg:R01196)	0	1000	
+r0275_cs_lung	AcCOAmitlung + Oxalung --> Citlung	AcCOAmitlung + Oxalung --> Citlung	AB + CDEF --> FEDBAC	(kegg:R00351)	0	1000	
+r0277_idh_lung	Citlung --> aKGlung + CO2inlung + NADHlung	Citlung --> aKGlung + CO2inlung	ABCDEF --> ABCDE + F	(kegg:R00709f)	0	1000	
+r0278_idh_lung	aKGlung + CO2inlung + NADHlung --> Citlung	aKGlung + CO2inlung --> Citlung	ABCDE + F --> ABCDEF	(kegg:R00709r)	0	1000	
+r0279_akgdh_lung	aKGlung --> Suclung + CO2inlung + ATPlung + NADHlung	aKGlung --> Suclung + CO2inlung	ABCDE --> BCDE + A	(kegg:R01197)	0	1000	
+r0281_sdh_lung	Suclung --> Fumlung + {0.6}NADHlung	Suclung --> Fumlung	ABCD --> ABCD	(kegg:R02164f)	0	1000	
+r0282_sdh_lung	Fumlung + {0.6}NADHlung --> Suclung	Fumlung --> Suclung	ABCD --> ABCD	(kegg:R02164r)	0	1000	
+r0283_fh_lung	Fumlung --> Mallung	Fumlung --> Mallung	ABCD --> ABCD	(kegg:R01082f)	0	1000	
+r0284_fh_lung	Mallung --> Fumlung	Mallung --> Fumlung	ABCD --> ABCD	(kegg:R01082r)	0	1000	
+r0285_mdh_lung	Mallung --> Oxalung + NADHlung	Mallung --> Oxalung	ABCD --> ABCD	(kegg:R00343f)	0	1000	
+r0286_mdh_lung	Oxalung + NADHlung --> Mallung	Oxalung --> Mallung	ABCD --> ABCD	(kegg:R00343r)	0	1000	
+r0287_MAL_lung_ex	Mallung --> Malcytlung	Mallung --> Malcytlung	ABCD --> ABCD	(kegg:MAL_cyt)	0	1000	
+r0288_MAL_lung_ex	Malcytlung --> Mallung	Malcytlung --> Mallung	ABCD --> ABCD	(kegg:MAL_cyt)	0	1000	
+r0289_mdh_lung_cyt	Malcytlung --> Oxacytlung + NADHlung	Malcytlung --> Oxacytlung	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000	
+r0290_mdh_lung_cyt	Oxacytlung + NADHlung --> Malcytlung	Oxacytlung --> Malcytlung	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000	
+r0291_pc_lung	Pyrlung + CO2inlung + ATPlung --> Oxalung	Pyrlung + CO2inlung --> Oxalung	ABC + D --> ABCD	(kegg:R00344)	0	1000	
+r0292_pck1_lung	Oxacytlung --> PEPlung	Oxacytlung --> PEPlung	ABCD --> ABC	(kegg: R00431cyto)	0	1000	
+r0293_pck2_lung	Oxalung --> PEPlung	Oxalung --> PEPlung	ABCD  --> ABC	(kegg:R00431mito)	0	1000	
+r0294_fbp_lung	FBPlung --> F6Plung	FBPlung --> F6Plung	ABCDEF --> ABCDEF	(kegg:R00762)	0	1000	
+r0295_g6pc_lung	G6Plung --> Glclung	G6Plung --> Glclung	ABCDEF --> ABCDEF	(kegg:R00303)	0	1000	
+r0299_mae_lung	Mallung --> Pyrlung + CO2inlung + NADPHlung	Mallung --> Pyrlung + CO2inlung	ABCD --> ABC + D	(kegg:R00216)	0	1000	
+r0301_g6pdh_lung	G6Plung --> m6PGlung + NADPHlung	G6Plung --> m6PGlung	ABCDEF --> ABCDEF	(kegg:R00835)	0	1000	
+r0302_pgd_lung	m6PGlung --> Ru5Plung + CO2inlung + NADPHlung	m6PGlung --> Ru5Plung + CO2inlung	ABCDEF --> BCDEF + A	(kegg:R01528)	0	1000	
+r0303_ri_lung	Ru5Plung --> R5Plung	Ru5Plung --> R5Plung	ABCDE --> ABCDE	(kegg:R01056f)	0	1000	
+r0304_ri_lung	R5Plung --> Ru5Plung	R5Plung --> Ru5Plung	ABCDE --> ABCDE	(kegg:R01056r)	0	1000	
+r0305_rbe_lung	Ru5Plung --> Xu5Plung	Ru5Plung --> Xu5Plung	ABCDE --> ABCDE	(kegg:R01529f)	0	1000	
+r0306_rbe_lung	Xu5Plung --> Ru5Plung	Xu5Plung --> Ru5Plung	ABCDE --> ABCDE	(kegg:R01529r)	0	1000	
+r0307_tkt1_lung	R5Plung + Xu5Plung --> S7Plung + GAPlung	R5Plung + Xu5Plung --> S7Plung + GAPlung	ABCDE + FGHIJ --> FGABCDE + HIJ	(kegg:R01641f)	0	1000	
+r0308_tkt1_lung	GAPlung + S7Plung --> Xu5Plung + R5Plung	GAPlung + S7Plung --> Xu5Plung + R5Plung	HIJ + FGABCDE --> FGHIJ + ABCDE	(kegg:R01641r)	0	1000	
+r0309_tal_lung	GAPlung + S7Plung --> F6Plung + E4Plung	GAPlung + S7Plung --> F6Plung + E4Plung	ABC + DEFGHIJ --> DEFABC + GHIJ	(kegg:R08575f)	0	1000	
+r0310_tal_lung	E4Plung + F6Plung --> S7Plung + GAPlung	E4Plung + F6Plung --> S7Plung + GAPlung	GHIJ + DEFABC --> DEFGHIJ + ABC	(kegg:R08575r)	0	1000	
+r0311_tkt2_lung	E4Plung + Xu5Plung --> F6Plung + GAPlung	E4Plung + Xu5Plung --> F6Plung + GAPlung	ABCD + EFGHI --> EFABCD + GHI	(kegg:R01067f)	0	1000	
+r0312_tkt2_lung	GAPlung + F6Plung --> Xu5Plung + E4Plung	GAPlung + F6Plung --> Xu5Plung + E4Plung	GHI + EFABCD --> EFGHI + ABCD	(kegg:R01067r)	0	1000	
+r0313_cad_lung	Asplung + CO2inlung + R5Plung --> UMPlung + CO2	Asplung + CO2inlung + R5Plung --> UMPlung + CO2	ABCD + E + FGHIJ --> BCDEFGHIJ + A	(kegg:R01397)	0	100	
+r0314_nt_lung	UMPlung --> Uridinelung	UMPlung --> Uridinelung	ABCDEFGHI --> ABCDEFGHI	(kegg:R00963)	0	100	
+r0315_urk_lung	Uridinelung --> UMPlung	Uridinelung --> UMPlung	ABCDEFGHI --> ABCDEFGHI	(kegg:R00964)	0	100	
+r0321_ldh_lung	Pyrlung + NADHlung --> Laclung	Pyrlung --> Laclung	ABC --> ABC	(kegg:R00703f)	0	1000	
+r0322_ldh_lung	Laclung --> Pyrlung + NADHlung	Laclung --> Pyrlung	ABC --> ABC	(kegg:R00703r)	0	1000	
+r0323_phgdh_lung	m3PGlung --> Serlung + NADHlung	m3PGlung --> Serlung	ABC --> ABC	(kegg:R01513)	0	1000	
+r0324_sal_lung	Serlung --> Pyrlung	Serlung --> Pyrlung	ABC --> ABC	(kegg:R00220)	0	1000	
+r0325_gptm_lung	Pyrlung --> Alalung	Pyrlung --> Alalung	ABC --> ABC	(kegg:R00258f)	0	1000	
+r0326_gpt_lung	Alalung --> Pyrlung	Alalung --> Pyrlung	ABC --> ABC	(kegg:R00258r)	0	1000	
+r0327_got_lung	Oxacytlung --> Asplung	Oxacytlung --> Asplung	ABCD --> ABCD	(kegg:R00355f)	0	1000	
+r0329_gludh_lung	aKGlung + NADPHlung --> Glulung	aKGlung --> Glulung	ABCDE --> ABCDE	(kegg:R00243r)	0	1000	
+r0330_gludh_lung	Glulung --> aKGlung + NADPHlung	Glulung --> aKGlung	ABCDE --> ABCDE	(kegg:R00243f)	0	1000	
+r0331_glul_lung	Glulung --> Glnlung	Glulung --> Glnlung	ABCDE --> ABCDE	(kegg:R00253))	0	1000	
+r0332_gls_lung	Glnlung --> Glulung	Glnlung --> Glulung	ABCDE --> ABCDE	(kegg:R00256)	0	1000	
+r0333_acl_lung	Citlung --> AcCOAcytlung + Oxacytlung	Citlung --> AcCOAcytlung + Oxacytlung	FEDBAC --> AB + CDEF	(kegg:R00352)	0	1000	
+r0335_aat_lung	AcCOAcytlung + Asplung --> AcAsplung	AcCOAcytlung + Asplung --> AcAsplung	AB + CDEF --> ABCDEF	(kegg:R00487)	0	1000	
+r0336_OXPHOS_lung	NADHlung -->{2.3}ATPlung	nd	nd	(kegg:ATPsynthesis)	0	1000	
+r0401_Glc_brain_ex	GlcCn --> Glcbrain	GlcCn --> Glcbrain	ABCDEF --> ABCDEF	(kegg:Glc_brain_uptake)	0	500	
+r0402_CO2_brain_ex	CO2 --> CO2inbrain	CO2 --> CO2inbrain	A --> A	(kegg:CO2_brain_uptake)	0	500	
+r0403_Lac_brain_ex	LacCn --> Lacbrain	LacCn --> Lacbrain	ABC --> ABC	(kegg:Lac_brain_uptake)	0	500	
+r0404_AcCOAmit_brain_ex	AcCOAmit --> AcCOAmitbrain	AcCOAmit --> AcCOAmitbrain	AB--> AB	(kegg:AcCOAmit_brain_uptake)	0	500	
+r0405_Gly_brain_ex	Gly --> DHAPbrain + {0.6}NADHbrain	Gly --> DHAPbrain	ABC --> ABC	(kegg:Gly_brain_uptake)	0	500	
+r0406_Gln_brain_ex	Gln --> Glnbrain	Gln --> Glnbrain	ABCDE --> ABCDE	(kegg:Gln_brain_uptake)	0	500	
+r0407_Ala_brain_ex	Ala --> Alabrain	Ala --> Alabrain	ABC --> ABC	(kegg:Ala_brain_uptake)	0	500	
+r0408_Ser_brain_ex	Ser --> Serbrain	Ser --> Serbrain	ABC --> ABC	(kegg:Ser_brain_uptake)	0	500	
+r0409_Uridine_brain_ex	Uridine --> Uridinebrain	Uridine --> Uridinebrain	ABCDEFGHI --> ABCDEFGHI	(kegg:Uridine_brain_uptake)	0	500	
+r0410_R5P_brain_ex	R5P --> R5Pbrain	R5P --> R5Pbrain	ABCDE --> ABCDE	(kegg:R5P_brain_uptake)	0	500	
+r0411_Glc_brain_ex	Glcbrain --> GlcCn	Glcbrain --> GlcCn	ABCDEF --> ABCDEF	(kegg:Glc_brain_excretion)	0	500	
+r0412_CO2_brain_ex	CO2inbrain --> CO2	CO2inbrain --> CO2	A --> A	(kegg:CO2_brain_excretion)	0	500	
+r0413_Lac_brain_ex	Lacbrain --> LacCn	Lacbrain --> LacCn	ABC --> ABC	(kegg:Lac_brain_excretion)	0	500	
+r0414_AcCOAmit_brain_ex	AcCOAmitbrain --> AcCOAmit	AcCOAmitbrain --> AcCOAmit	AB--> AB	(kegg:AcCOAmit_brain_excretion)	0	500	
+r0415_Gly_brain_ex	DHAPbrain --> Gly	DHAPbrain --> Gly	ABC --> ABC	(kegg:Gly_brain_excretion)	0	500	
+r0416_Gln_brain_ex	Glnbrain --> Gln	Glnbrain --> Gln	ABCDE --> ABCDE	(kegg:Gln_brain_excretion)	0	500	
+r0417_Ala_brain_ex	Alabrain --> Ala	Alabrain --> Ala	ABC --> ABC	(kegg:Ala_brain_excretion)	0	500	
+r0418_Ser_brain_ex	Serbrain --> Ser	Serbrain --> Ser	ABC --> ABC	(kegg:Ser_brain_excretion)	0	500	
+r0419_Uridine_brain_ex	Uridinebrain --> Uridine	Uridinebrain --> Uridine	ABCDEFGHI --> ABCDEFGHI	(kegg:Uridine_brain_excretion)	0	500	
+r0420_R5P_brain_ex	R5Pbrain --> R5P	R5Pbrain --> R5P	ABCDE --> ABCDE	(kegg:R5P_brain_excretion)	0	500	
+r0431_G6P_brain_BIO	G6Pbrain --> G6PBiomassbrain	nd	nd	(kegg:BiomassG6P_brain)	0	100	
+r0432_UMP_brain_BIO	UMPbrain --> UMPBiomassbrain	nd	nd	(kegg:BiomassUMP_brain)	0	100	
+r0433_DHAP_brain_BIO	DHAPbrain --> DHAPBiomassbrain	nd	nd	(kegg:BiomassDHAP_brain)	0	100	
+r0434_Ser_brain_BIO	Serbrain --> SerBiomassbrain	nd	nd	(kegg:BiomassSer_brain)	0	100	
+r0435_Ala_brain_BIO	Alabrain --> AlaBiomassbrain	nd	nd	(kegg:BiomassAla_brain)	0	100	
+r0436_Asp_brain_BIO	Aspbrain --> AspBiomassbrain	nd	nd	(kegg:BiomassAsp_brain)	0	100	
+r0437_Glu_brain_BIO	Glubrain --> GluBiomassbrain	nd	nd	(kegg:BiomassGlu_brain)	0	100	
+r0438_Gln_brain_BIO	Glnbrain --> GlnBiomassbrain	nd	nd	(kegg:BiomassGln_brain)	0	100	
+r0439_FA_brain_BIO	AcCOAcytbrain + {2}NADPHbrain --> FABiomassbrain	nd	nd	(kegg:BiomassFA_brain)	0	100	
+r0440_ATP_brain_BIO	ATPbrain --> ATPBiomassbrain	nd	nd	(kegg:BiomassATP_brain)	0	100	
+r0441_NADPH_brain_BIO	NADPHbrain --> NADPHBiomassbrain	nd	nd	(kegg:BiomassNADPH_brain)	0	100	
+r0442_AcAsp_brain_BIO	AcAspbrain --> AcAspBiomassbrain	nd	nd	(kegg:BiomassAcAsp_brain)	0	100	
+r0443_CO2_brain_BIO	CO2inbrain --> CO2Biomassbrain	nd	nd	(kegg:BiomassCO2_brain)	0	1000	
+r0460_hk_brain	Glcbrain + ATPbrain --> G6Pbrain	Glcbrain --> G6Pbrain	ABCDEF --> ABCDEF	(kegg:R02848)	0	1000	
+r0461_pgi_brain	G6Pbrain --> F6Pbrain	G6Pbrain --> F6Pbrain	ABCDEF --> ABCDEF	(kegg:R00771f)	0	1000	
+r0462_pgi_brain	F6Pbrain --> G6Pbrain	F6Pbrain --> G6Pbrain	ABCDEF --> ABCDEF	(kegg:R00771r)	0	1000	
+r0463_pfk_brain	F6Pbrain + ATPbrain --> FBPbrain	F6Pbrain --> FBPbrain	ABCDEF --> ABCDEF	(kegg:R00756)	0	1000	
+r0465_fba_brain	FBPbrain --> DHAPbrain + GAPbrain	FBPbrain --> DHAPbrain + GAPbrain	ABCDEF --> CBA + DEF	(kegg:R01068f)	0	1000	
+r0466_fba_brain	DHAPbrain + GAPbrain --> FBPbrain	DHAPbrain + GAPbrain --> FBPbrain	CBA + DEF --> ABCDEF	(kegg:R01068r)	0	1000	
+r0467_tpi_brain	DHAPbrain --> GAPbrain	DHAPbrain --> GAPbrain	ABC --> ABC	(kegg:R01015f)	0	1000	
+r0468_tpi_brain	GAPbrain --> DHAPbrain	GAPbrain --> DHAPbrain	ABC --> ABC	(kegg:R01015r)	0	1000	
+r0469_gapdh_brain	GAPbrain--> m3PGbrain + NADHbrain + ATPbrain	GAPbrain --> m3PGbrain	ABC --> ABC	(kegg:R01061f)	0	1000	
+r0470_gapdh_brain	m3PGbrain + NADHbrain + ATPbrain --> GAPbrain	m3PGbrain --> GAPbrain	ABC --> ABC	(kegg:R01061r)	0	1000	
+r0471_peph_brain	m3PGbrain --> PEPbrain	m3PGbrain --> PEPbrain	ABC --> ABC	(kegg:R01512f)	0	1000	
+r0472_peph_brain	PEPbrain --> m3PGbrain	PEPbrain --> m3PGbrain	ABC --> ABC	(kegg:R01512r)	0	1000	
+r0473_pk_brain	PEPbrain --> Pyrbrain + ATPbrain	PEPbrain --> Pyrbrain	ABC --> ABC	(kegg:R00200)	0	1000	
+r0474_pyrdh_brain	Pyrbrain --> AcCOAmitbrain + CO2inbrain + NADHbrain	Pyrbrain --> AcCOAmitbrain + CO2inbrain	ABC --> BC + A	(kegg:R01196)	0	1000	
+r0475_cs_brain	AcCOAmitbrain + Oxabrain --> Citbrain	AcCOAmitbrain + Oxabrain --> Citbrain	AB + CDEF --> FEDBAC	(kegg:R00351)	0	1000	
+r0477_idh_brain	Citbrain --> aKGbrain + CO2inbrain + NADHbrain	Citbrain --> aKGbrain + CO2inbrain	ABCDEF --> ABCDE + F	(kegg:R00709f)	0	1000	
+r0478_idh_brain	aKGbrain + CO2inbrain + NADHbrain --> Citbrain	aKGbrain + CO2inbrain --> Citbrain	ABCDE + F --> ABCDEF	(kegg:R00709r)	0	1000	
+r0479_akgdh_brain	aKGbrain --> Sucbrain + CO2inbrain + ATPbrain + NADHbrain	aKGbrain --> Sucbrain + CO2inbrain	ABCDE --> BCDE + A	(kegg:R01197)	0	1000	
+r0481_sdh_brain	Sucbrain --> Fumbrain + {0.6}NADHbrain	Sucbrain --> Fumbrain	ABCD --> ABCD	(kegg:R02164f)	0	1000	
+r0482_sdh_brain	Fumbrain + {0.6}NADHbrain --> Sucbrain	Fumbrain --> Sucbrain	ABCD --> ABCD	(kegg:R02164r)	0	1000	
+r0483_fh_brain	Fumbrain --> Malbrain	Fumbrain --> Malbrain	ABCD --> ABCD	(kegg:R01082f)	0	1000	
+r0484_fh_brain	Malbrain --> Fumbrain	Malbrain --> Fumbrain	ABCD --> ABCD	(kegg:R01082r)	0	1000	
+r0485_mdh_brain	Malbrain --> Oxabrain + NADHbrain	Malbrain --> Oxabrain	ABCD --> ABCD	(kegg:R00343f)	0	1000	
+r0486_mdh_brain	Oxabrain + NADHbrain --> Malbrain	Oxabrain --> Malbrain	ABCD --> ABCD	(kegg:R00343r)	0	1000	
+r0487_MAL_brain_ex	Malbrain --> Malcytbrain	Malbrain --> Malcytbrain	ABCD --> ABCD	(kegg:MAL_cyt)	0	1000	
+r0488_MAL_brain_ex	Malcytbrain --> Malbrain	Malcytbrain --> Malbrain	ABCD --> ABCD	(kegg:MAL_cyt)	0	1000	
+r0489_mdh_brain_cyt	Malcytbrain --> Oxacytbrain + NADHbrain	Malcytbrain --> Oxacytbrain	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000	
+r0490_mdh_brain_cyt	Oxacytbrain + NADHbrain --> Malcytbrain	Oxacytbrain --> Malcytbrain	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000	
+r0491_pc_brain	Pyrbrain + CO2inbrain + ATPbrain --> Oxabrain	Pyrbrain + CO2inbrain --> Oxabrain	ABC + D --> ABCD	(kegg:R00344)	0	1000	
+r0492_pck1_brain	Oxacytbrain --> PEPbrain	Oxacytbrain --> PEPbrain	ABCD --> ABC	(kegg: R00431cyto)	0	1000	
+r0493_pck2_brain	Oxabrain --> PEPbrain	Oxabrain --> PEPbrain	ABCD  --> ABC	(kegg:R00431mito)	0	1000	
+r0494_fbp_brain	FBPbrain --> F6Pbrain	FBPbrain --> F6Pbrain	ABCDEF --> ABCDEF	(kegg:R00762)	0	1000	
+r0495_g6pc_brain	G6Pbrain --> Glcbrain	G6Pbrain --> Glcbrain	ABCDEF --> ABCDEF	(kegg:R00303)	0	1000	
+r0499_mae_brain	Malbrain --> Pyrbrain + CO2inbrain + NADPHbrain	Malbrain --> Pyrbrain + CO2inbrain	ABCD --> ABC + D	(kegg:R00216)	0	1000	
+r0501_g6pdh_brain	G6Pbrain --> m6PGbrain + NADPHbrain	G6Pbrain --> m6PGbrain	ABCDEF --> ABCDEF	(kegg:R00835)	0	1000	
+r0502_pgd_brain	m6PGbrain --> Ru5Pbrain + CO2inbrain + NADPHbrain	m6PGbrain --> Ru5Pbrain + CO2inbrain	ABCDEF --> BCDEF + A	(kegg:R01528)	0	1000	
+r0503_ri_brain	Ru5Pbrain --> R5Pbrain	Ru5Pbrain --> R5Pbrain	ABCDE --> ABCDE	(kegg:R01056f)	0	1000	
+r0504_ri_brain	R5Pbrain --> Ru5Pbrain	R5Pbrain --> Ru5Pbrain	ABCDE --> ABCDE	(kegg:R01056r)	0	1000	
+r0505_rbe_brain	Ru5Pbrain --> Xu5Pbrain	Ru5Pbrain --> Xu5Pbrain	ABCDE --> ABCDE	(kegg:R01529f)	0	1000	
+r0506_rbe_brain	Xu5Pbrain --> Ru5Pbrain	Xu5Pbrain --> Ru5Pbrain	ABCDE --> ABCDE	(kegg:R01529r)	0	1000	
+r0507_tkt1_brain	R5Pbrain + Xu5Pbrain --> S7Pbrain + GAPbrain	R5Pbrain + Xu5Pbrain --> S7Pbrain + GAPbrain	ABCDE + FGHIJ --> FGABCDE + HIJ	(kegg:R01641f)	0	1000	
+r0508_tkt1_brain	GAPbrain + S7Pbrain --> Xu5Pbrain + R5Pbrain	GAPbrain + S7Pbrain --> Xu5Pbrain + R5Pbrain	HIJ + FGABCDE --> FGHIJ + ABCDE	(kegg:R01641r)	0	1000	
+r0509_tal_brain	GAPbrain + S7Pbrain --> F6Pbrain + E4Pbrain	GAPbrain + S7Pbrain --> F6Pbrain + E4Pbrain	ABC + DEFGHIJ --> DEFABC + GHIJ	(kegg:R08575f)	0	1000	
+r0510_tal_brain	E4Pbrain + F6Pbrain --> S7Pbrain + GAPbrain	E4Pbrain + F6Pbrain --> S7Pbrain + GAPbrain	GHIJ + DEFABC --> DEFGHIJ + ABC	(kegg:R08575r)	0	1000	
+r0511_tkt2_brain	E4Pbrain + Xu5Pbrain --> F6Pbrain + GAPbrain	E4Pbrain + Xu5Pbrain --> F6Pbrain + GAPbrain	ABCD + EFGHI --> EFABCD + GHI	(kegg:R01067f)	0	1000	
+r0512_tkt2_brain	GAPbrain + F6Pbrain --> Xu5Pbrain + E4Pbrain	GAPbrain + F6Pbrain --> Xu5Pbrain + E4Pbrain	GHI + EFABCD --> EFGHI + ABCD	(kegg:R01067r)	0	1000	
+r0513_cad_brain	Aspbrain + CO2inbrain + R5Pbrain --> UMPbrain + CO2	Aspbrain + CO2inbrain + R5Pbrain --> UMPbrain + CO2	ABCD + E + FGHIJ --> BCDEFGHIJ + A	(kegg:R01397)	0	100	
+r0514_nt_brain	UMPbrain --> Uridinebrain	UMPbrain --> Uridinebrain	ABCDEFGHI --> ABCDEFGHI	(kegg:R00963)	0	100	
+r0515_urk_brain	Uridinebrain --> UMPbrain	Uridinebrain --> UMPbrain	ABCDEFGHI --> ABCDEFGHI	(kegg:R00964)	0	100	
+r0521_ldh_brain	Pyrbrain + NADHbrain --> Lacbrain	Pyrbrain --> Lacbrain	ABC --> ABC	(kegg:R00703f)	0	1000	
+r0522_ldh_brain	Lacbrain --> Pyrbrain + NADHbrain	Lacbrain --> Pyrbrain	ABC --> ABC	(kegg:R00703r)	0	1000	
+r0523_phgdh_brain	m3PGbrain --> Serbrain + NADHbrain	m3PGbrain --> Serbrain	ABC --> ABC	(kegg:R01513)	0	1000	
+r0524_sal_brain	Serbrain --> Pyrbrain	Serbrain --> Pyrbrain	ABC --> ABC	(kegg:R00220)	0	1000	
+r0525_gptm_brain	Pyrbrain --> Alabrain	Pyrbrain --> Alabrain	ABC --> ABC	(kegg:R00258f)	0	1000	
+r0526_gpt_brain	Alabrain --> Pyrbrain	Alabrain --> Pyrbrain	ABC --> ABC	(kegg:R00258r)	0	1000	
+r0527_got_brain	Oxacytbrain --> Aspbrain	Oxacytbrain --> Aspbrain	ABCD --> ABCD	(kegg:R00355f)	0	1000	
+r0529_gludh_brain	aKGbrain + NADPHbrain --> Glubrain	aKGbrain --> Glubrain	ABCDE --> ABCDE	(kegg:R00243r)	0	1000	
+r0530_gludh_brain	Glubrain --> aKGbrain + NADPHbrain	Glubrain --> aKGbrain	ABCDE --> ABCDE	(kegg:R00243f)	0	1000	
+r0531_glul_brain	Glubrain --> Glnbrain	Glubrain --> Glnbrain	ABCDE --> ABCDE	(kegg:R00253))	0	1000	
+r0532_gls_brain	Glnbrain --> Glubrain	Glnbrain --> Glubrain	ABCDE --> ABCDE	(kegg:R00256)	0	1000	
+r0533_acl_brain	Citbrain --> AcCOAcytbrain + Oxacytbrain	Citbrain --> AcCOAcytbrain + Oxacytbrain	FEDBAC --> AB + CDEF	(kegg:R00352)	0	1000	
+r0535_aat_brain	AcCOAcytbrain + Aspbrain --> AcAspbrain	AcCOAcytbrain + Aspbrain --> AcAspbrain	AB + CDEF --> ABCDEF	(kegg:R00487)	0	1000	
+r0536_OXPHOS_brain	NADHbrain -->{2.3}ATPbrain	nd	nd	(kegg:ATPsynthesis)	0	1000	
+#							
+#Name_of_intermediate{\t}carbon_number							
+#							
+//Metabolites							
+SubsAla	3	no	carbonsource	no	(SubsAla)	0	300
+SubsAcCOAmit	2	no	carbonsource	no	(SubsAcCOAmit)	0	300
+SubsCO2	1	no	carbonsource	no	(SubsCO2)	0	300
+SubsGlcPeri	6	no	carbonsource	no	(SubsGlcPeri)	0	300
+SubsGln	5	no	carbonsource	no	(SubsGln)	0	300
+SubsGly	3	no	carbonsource	no	(SubsGly)	0	300
+SubsLacPeri	3	no	carbonsource	no	(SubsLacPeri)	0	300
+SubsR5P	5	no	carbonsource	no	(SubsR5P)	0	50
+SubsSer	3	no	carbonsource	no	(SubsSer)	0	300
+SubsUridine	9	no	carbonsource	no	(SubsUridine)	0	50
+SubsGlcCn	6	no	carbonsource	no	(SubsGlcCn)	0	300
+SubsLacCn	3	no	carbonsource	no	(SubsLacCn)	0	300
+Ala	3	no	no	no	(kegg:C00041)	0	300
+AcCOAmit	2	no	no	no	(kegg:C00024)	0	300
+CO2	1	no	no	no	(kegg:C00011)	0	300
+GlcCn	6	no	no	no	(kegg:C00031cn)	0	300
+GlcPeri	6	no	no	no	(kegg:C00031)	0	300
+Gly	3	no	no	no	(kegg:C00037)	0	300
+Gln	5	no	no	no	(kegg:C00064)	0	300
+LacCn	3	no	no	no	(kegg:C00186cn)	0	300
+LacPeri	3	no	no	no	(kegg:C00186)	0	300
+R5P	5	no	no	no	(kegg:C00117)	0	300
+Ser	3	no	no	no	(kegg:C00065)	0	300
+Uridine	9	no	no	no	(kegg:C00299)	0	300
+AlaBiomassliver	3	no	no	excreted	(AlaBiomassliver)	0	30
+AspBiomassliver	4	no	no	excreted	(AspBiomassliver)	0	30
+DHAPBiomassliver	3	no	no	excreted	(DHAPBiomassliver)	0	30
+G6PBiomassliver	6	no	no	excreted	(G6PBiomassliver)	0	30
+GlnBiomassliver	5	no	no	excreted	(GlnBiomassliver)	0	30
+GluBiomassliver	5	no	no	excreted	(GluBiomassliver)	0	30
+UMPBiomassliver	5	no	no	excreted	(UMPBiomassliver)	0	30
+SerBiomassliver	3	no	no	excreted	(SerBiomassliver)	0	30
+NADPHBiomassliver	0	no	no	excreted	(NADPHBiomassliver)	0	300
+ATPBiomassliver	0	no	no	excreted	(ATPBiomassliver)	0	300
+CO2Biomassliver	1	no	no	excreted	(CO2Biomassliver)	0	300
+FABiomassliver	16	no	no	excreted	(FABiomassliver)	0	300
+AcAspBiomassliver	6	no	no	excreted	(AcAspBiomassliver)	0	300
+NADHliver	0	no	no	no	(kegg:C00004)	0	300
+NADPHliver	0	no	no	no	(kegg:C00005)	0	300
+ATPliver	0	no	no	no	(kegg:C00002)	0	300
+AcCOAcytliver	2	no	no	no	(kegg:C00024)	0	300
+AcCOAmitliver	2	no	no	no	(kegg:C00024)	0	300
+aKGliver	5	no	no	no	(kegg:C00026)	0	300
+Alaliver	3	no	no	no	(kegg:C00041)	0	300
+Aspliver	4	no	no	no	(kegg:C00049)	0	300
+Citliver	6	no	no	no	(kegg:C00158)	0	300
+CO2inliver	1	no	no	no	(kegg:CO2in)	0	300
+DHAPliver	3	no	no	no	(kegg:C00111)	0	300
+E4Pliver	4	no	no	no	(kegg:C00279)	0	300
+F6Pliver	6	no	no	no	(kegg:C00085)	0	300
+FBPliver	6	no	no	no	(kegg:C00354)	0	300
+Fumliver	4	symmetry	no	no	(kegg:C00122)	0	300
+G6Pliver	6	no	no	no	(kegg:C00092)	0	300
+GAPliver	3	no	no	no	(kegg:C00118)	0	300
+Glnliver	5	no	no	no	(kegg:C00064)	0	300
+Gluliver	5	no	no	no	(kegg:C00025)	0	300
+Lacliver	3	no	no	no	(kegg:C00186)	0	300
+m6PGliver	6	no	no	no	(kegg:C00345)	0	300
+Malliver	4	no	no	no	(kegg:C00149)	0	300
+Malcytliver	4	no	no	no	(kegg:C00149)	0	300
+Oxaliver	4	no	no	no	(kegg:C00036)	0	300
+Oxacytliver	4	no	no	no	(kegg:C00036)	0	300
+PEPliver	3	no	no	no	(kegg:C00074)	0	300
+m3PGliver	3	no	no	no	(kegg:C00631)	0	300
+Pyrliver	3	no	no	no	(kegg:C00022)	0	300
+R5Pliver	5	no	no	no	(kegg:C00117)	0	300
+Ru5Pliver	5	no	no	no	(kegg:C00199)	0	300
+S7Pliver	7	no	no	no	(kegg:C05382)	0	300
+Sucliver	4	symmetry	no	no	(kegg:C00042)	0	300
+Xu5Pliver	5	no	no	no	(kegg:C00231)	0	300
+Glcliver	6	no	no	no	(kegg:C00031)	0	300
+Serliver	3	no	no	no	(kegg:C00065)	0	300
+AcAspliver	6	no	no	no	(kegg:C01042)	0	5
+Uridineliver	9	no	no	no	(kegg:C00299)	0	300
+UMPliver	9	no	no	no	(kegg:C00105)	0	300
+AlaBiomasslung	3	no	no	excreted	(AlaBiomasslung)	0	30
+AspBiomasslung	4	no	no	excreted	(AspBiomasslung)	0	30
+DHAPBiomasslung	3	no	no	excreted	(DHAPBiomasslung)	0	30
+G6PBiomasslung	6	no	no	excreted	(G6PBiomasslung)	0	30
+GlnBiomasslung	5	no	no	excreted	(GlnBiomasslung)	0	30
+GluBiomasslung	5	no	no	excreted	(GluBiomasslung)	0	30
+UMPBiomasslung	5	no	no	excreted	(UMPBiomasslung)	0	30
+SerBiomasslung	3	no	no	excreted	(SerBiomasslung)	0	30
+NADPHBiomasslung	0	no	no	excreted	(NADPHBiomasslung)	0	300
+ATPBiomasslung	0	no	no	excreted	(ATPBiomasslung)	0	300
+CO2Biomasslung	1	no	no	excreted	(CO2Biomasslung)	0	300
+FABiomasslung	16	no	no	excreted	(FABiomasslung)	0	300
+AcAspBiomasslung	6	no	no	excreted	(AcAspBiomasslung)	0	300
+NADHlung	0	no	no	no	(kegg:C00004)	0	300
+NADPHlung	0	no	no	no	(kegg:C00005)	0	300
+ATPlung	0	no	no	no	(kegg:C00002)	0	300
+AcCOAcytlung	2	no	no	no	(kegg:C00024)	0	300
+AcCOAmitlung	2	no	no	no	(kegg:C00024)	0	300
+aKGlung	5	no	no	no	(kegg:C00026)	0	300
+Alalung	3	no	no	no	(kegg:C00041)	0	300
+Asplung	4	no	no	no	(kegg:C00049)	0	300
+Citlung	6	no	no	no	(kegg:C00158)	0	300
+CO2inlung	1	no	no	no	(kegg:CO2in)	0	300
+DHAPlung	3	no	no	no	(kegg:C00111)	0	300
+E4Plung	4	no	no	no	(kegg:C00279)	0	300
+F6Plung	6	no	no	no	(kegg:C00085)	0	300
+FBPlung	6	no	no	no	(kegg:C00354)	0	300
+Fumlung	4	symmetry	no	no	(kegg:C00122)	0	300
+G6Plung	6	no	no	no	(kegg:C00092)	0	300
+GAPlung	3	no	no	no	(kegg:C00118)	0	300
+Glnlung	5	no	no	no	(kegg:C00064)	0	300
+Glulung	5	no	no	no	(kegg:C00025)	0	300
+Laclung	3	no	no	no	(kegg:C00186)	0	300
+m6PGlung	6	no	no	no	(kegg:C00345)	0	300
+Mallung	4	no	no	no	(kegg:C00149)	0	300
+Malcytlung	4	no	no	no	(kegg:C00149)	0	300
+Oxalung	4	no	no	no	(kegg:C00036)	0	300
+Oxacytlung	4	no	no	no	(kegg:C00036)	0	300
+PEPlung	3	no	no	no	(kegg:C00074)	0	300
+m3PGlung	3	no	no	no	(kegg:C00631)	0	300
+Pyrlung	3	no	no	no	(kegg:C00022)	0	300
+R5Plung	5	no	no	no	(kegg:C00117)	0	300
+Ru5Plung	5	no	no	no	(kegg:C00199)	0	300
+S7Plung	7	no	no	no	(kegg:C05382)	0	300
+Suclung	4	symmetry	no	no	(kegg:C00042)	0	300
+Xu5Plung	5	no	no	no	(kegg:C00231)	0	300
+Glclung	6	no	no	no	(kegg:C00031)	0	300
+Serlung	3	no	no	no	(kegg:C00065)	0	300
+AcAsplung	6	no	no	no	(kegg:C01042)	0	5
+Uridinelung	9	no	no	no	(kegg:C00299)	0	300
+UMPlung	9	no	no	no	(kegg:C00105)	0	300
+AlaBiomassbrain	3	no	no	excreted	(AlaBiomassbrain)	0	30
+AspBiomassbrain	4	no	no	excreted	(AspBiomassbrain)	0	30
+DHAPBiomassbrain	3	no	no	excreted	(DHAPBiomassbrain)	0	30
+G6PBiomassbrain	6	no	no	excreted	(G6PBiomassbrain)	0	30
+GlnBiomassbrain	5	no	no	excreted	(GlnBiomassbrain)	0	30
+GluBiomassbrain	5	no	no	excreted	(GluBiomassbrain)	0	30
+UMPBiomassbrain	5	no	no	excreted	(UMPBiomassbrain)	0	30
+SerBiomassbrain	3	no	no	excreted	(SerBiomassbrain)	0	30
+NADPHBiomassbrain	0	no	no	excreted	(NADPHBiomassbrain)	0	300
+ATPBiomassbrain	0	no	no	excreted	(ATPBiomassbrain)	0	300
+CO2Biomassbrain	1	no	no	excreted	(CO2Biomassbrain)	0	300
+FABiomassbrain	16	no	no	excreted	(FABiomassbrain)	0	300
+AcAspBiomassbrain	6	no	no	excreted	(AcAspBiomassbrain)	0	300
+NADHbrain	0	no	no	no	(kegg:C00004)	0	300
+NADPHbrain	0	no	no	no	(kegg:C00005)	0	300
+ATPbrain	0	no	no	no	(kegg:C00002)	0	300
+AcCOAcytbrain	2	no	no	no	(kegg:C00024)	0	300
+AcCOAmitbrain	2	no	no	no	(kegg:C00024)	0	300
+aKGbrain	5	no	no	no	(kegg:C00026)	0	300
+Alabrain	3	no	no	no	(kegg:C00041)	0	300
+Aspbrain	4	no	no	no	(kegg:C00049)	0	300
+Citbrain	6	no	no	no	(kegg:C00158)	0	300
+CO2inbrain	1	no	no	no	(kegg:CO2in)	0	300
+DHAPbrain	3	no	no	no	(kegg:C00111)	0	300
+E4Pbrain	4	no	no	no	(kegg:C00279)	0	300
+F6Pbrain	6	no	no	no	(kegg:C00085)	0	300
+FBPbrain	6	no	no	no	(kegg:C00354)	0	300
+Fumbrain	4	symmetry	no	no	(kegg:C00122)	0	300
+G6Pbrain	6	no	no	no	(kegg:C00092)	0	300
+GAPbrain	3	no	no	no	(kegg:C00118)	0	300
+Glnbrain	5	no	no	no	(kegg:C00064)	0	300
+Glubrain	5	no	no	no	(kegg:C00025)	0	300
+Lacbrain	3	no	no	no	(kegg:C00186)	0	300
+m6PGbrain	6	no	no	no	(kegg:C00345)	0	300
+Malbrain	4	no	no	no	(kegg:C00149)	0	300
+Malcytbrain	4	no	no	no	(kegg:C00149)	0	300
+Oxabrain	4	no	no	no	(kegg:C00036)	0	300
+Oxacytbrain	4	no	no	no	(kegg:C00036)	0	300
+PEPbrain	3	no	no	no	(kegg:C00074)	0	300
+m3PGbrain	3	no	no	no	(kegg:C00631)	0	300
+Pyrbrain	3	no	no	no	(kegg:C00022)	0	300
+R5Pbrain	5	no	no	no	(kegg:C00117)	0	300
+Ru5Pbrain	5	no	no	no	(kegg:C00199)	0	300
+S7Pbrain	7	no	no	no	(kegg:C05382)	0	300
+Sucbrain	4	symmetry	no	no	(kegg:C00042)	0	300
+Xu5Pbrain	5	no	no	no	(kegg:C00231)	0	300
+Glcbrain	6	no	no	no	(kegg:C00031)	0	300
+Serbrain	3	no	no	no	(kegg:C00065)	0	300
+AcAspbrain	6	no	no	no	(kegg:C01042)	0	5
+Uridinebrain	9	no	no	no	(kegg:C00299)	0	300
+UMPbrain	9	no	no	no	(kegg:C00105)	0	300
+#							
+"#List of reversible ractions, ID, forward,reverse"							
+#							
+//Reversible_reactions							
+PGI_liver	r0061_pgi_liver	r0062_pgi_liver	(kegg:R00771)	-1000	1000		
+FBA_liver	r0065_fba_liver	r0066_fba_liver	(kegg:R01068)	-1000	1000		
+TPI_liver	r0067_tpi_liver	r0068_tpi_liver	(kegg:R01015)	-1000	1000		
+GAPDH_liver	r0069_gapdh_liver	r0070_gapdh_liver	(kegg:R01061)	-1000	1000		
+PEPH_liver	r0071_peph_liver	r0072_peph_liver	(kegg:R01512)	-1000	1000		
+IDH_liver	r0077_idh_liver	r0078_idh_liver	(kegg:R00709)	-1000	1000		
+SDH_liver	r0081_sdh_liver	r0082_sdh_liver	(kegg:R02164)	-1000	1000		
+MDH_liver	r0085_mdh_liver	r0086_mdh_liver	(kegg:R00342)	-1000	1000		
+RPI_liver	r0103_ri_liver	r0104_ri_liver	(kegg:R01056)	-1000	1000		
+RBE_liver	r0105_rbe_liver	r0106_rbe_liver	(kegg:R01529)	-1000	1000		
+TKT1_liver	r0107_tkt_liver	r0108_tkt_liver	(kegg:R01641)	-1000	1000		
+TAL_liver	r0109_tal_liver	r0110_tal_liver	(kegg:R08575)	-1000	1000		
+TKT2_liver	r0111_tkt_liver	r0112_tkt_liver	(kegg:R01067)	-1000	1000		
+FH_liver	r0083_fh_liver	r0084_fh_liver	(kegg:R01082)	-1000	1000		
+MDHcyt_liver	r0089_mdh_liver_cyt	r0090_mdh_liver_cyt	(kegg:MDHcyt)	-1000	1000		
+LDH_liver	r0121_ldh_liver	r0122_ldh_liver	(kegg:R00703)	-1000	1000		
+GLUDH_liver	r0129_gludh_liver	r0130_gludh_liver	(kegg:R00243)	-1000	1000		
+PGI_lung	r0261_pgi_lung	r0262_pgi_lung	(kegg:R00771)	-1000	1000		
+FBA_lung	r0265_fba_lung	r0266_fba_lung	(kegg:R01068)	-1000	1000		
+TPI_lung	r0267_tpi_lung	r0268_tpi_lung	(kegg:R01015)	-1000	1000		
+GAPDH_lung	r0269_gapdh_lung	r0270_gapdh_lung	(kegg:R01061)	-1000	1000		
+PEPH_lung	r0271_peph_lung	r0272_peph_lung	(kegg:R01512)	-1000	1000		
+IDH_lung	r0277_idh_lung	r0278_idh_lung	(kegg:R00709)	-1000	1000		
+SDH_lung	r0281_sdh_lung	r0282_sdh_lung	(kegg:R02164)	-1000	1000		
+MDH_lung	r0285_mdh_lung	r0286_mdh_lung	(kegg:R00342)	-1000	1000		
+RPI_lung	r0303_ri_lung	r0304_ri_lung	(kegg:R01056)	-1000	1000		
+RBE_lung	r0305_rbe_lung	r0306_rbe_lung	(kegg:R01529)	-1000	1000		
+TKT1_lung	r0307_tkt_lung	r0308_tkt_lung	(kegg:R01641)	-1000	1000		
+TAL_lung	r0309_tal_lung	r0310_tal_lung	(kegg:R08575)	-1000	1000		
+TKT2_lung	r0311_tkt_lung	r0312_tkt_lung	(kegg:R01067)	-1000	1000		
+FH_lung	r0283_fh_lung	r0284_fh_lung	(kegg:R01082)	-1000	1000		
+MDHcyt_lung	r0289_mdh_lung_cyt	r0290_mdh_lung_cyt	(kegg:MDHcyt)	-1000	1000		
+LDH_lung	r0321_ldh_lung	r0322_ldh_lung	(kegg:R00703)	-1000	1000		
+GLUDH_lung	r0329_gludh_lung	r0330_gludh_lung	(kegg:R00243)	-1000	1000		
+PGI_brain	r0461_pgi_brain	r0462_pgi_brain	(kegg:R00771)	-1000	1000		
+FBA_brain	r0465_fba_brain	r0466_fba_brain	(kegg:R01068)	-1000	1000		
+TPI_brain	r0467_tpi_brain	r0468_tpi_brain	(kegg:R01015)	-1000	1000		
+GAPDH_brain	r0469_gapdh_brain	r0470_gapdh_brain	(kegg:R01061)	-1000	1000		
+PEPH_brain	r0471_peph_brain	r0472_peph_brain	(kegg:R01512)	-1000	1000		
+IDH_brain	r0477_idh_brain	r0478_idh_brain	(kegg:R00709)	-1000	1000		
+SDH_brain	r0481_sdh_brain	r0482_sdh_brain	(kegg:R02164)	-1000	1000		
+MDH_brain	r0485_mdh_brain	r0486_mdh_brain	(kegg:R00342)	-1000	1000		
+RPI_brain	r0503_ri_brain	r0504_ri_brain	(kegg:R01056)	-1000	1000		
+RBE_brain	r0505_rbe_brain	r0506_rbe_brain	(kegg:R01529)	-1000	1000		
+TKT1_brain	r0507_tkt_brain	r0508_tkt_brain	(kegg:R01641)	-1000	1000		
+TAL_brain	r0509_tal_brain	r0510_tal_brain	(kegg:R08575)	-1000	1000		
+TKT2_brain	r0511_tkt_brain	r0512_tkt_brain	(kegg:R01067)	-1000	1000		
+FH_brain	r0483_fh_brain	r0484_fh_brain	(kegg:R01082)	-1000	1000		
+MDHcyt_brain	r0489_mdh_brain_cyt	r0490_mdh_brain_cyt	(kegg:MDHcyt)	-1000	1000		
+LDH_brain	r0521_ldh_brain	r0522_ldh_brain	(kegg:R00703)	-1000	1000		
+GLUDH_brain	r0529_gludh_brain	r0530_gludh_brain	(kegg:R00243)	-1000	1000		
+#							
+#List of Target compound whose MDV are generarted by the calmdv function.							
+#							
+//Target_fragments							
+Pyrliver	intermediate	Pyrliver_1:2:3	use	C3H4O3			
+Malliver	intermediate	Malliver_1:2:3:4	use	C4H6O5			
+Citliver	intermediate	Citliver_1:2:3:4:5:6	use	C6H8O7			
+Alaliver	intermediate	Pyrliver_1:2:3	use	C3H7NO2			
+Aspliver	intermediate	Aspliver_1:2:3:4	use	C4H7NO4			
+aKGliver	intermediate	aKGliver_1:2:3:4:5	use	C5H6O5			
+m3PGliver	intermediate	m3PGliver_1:2:3	use	C3H7O7P			
+DHAPliver	intermediate	DHAPliver_1:2:3	use	C3H7O6P 			
+E4Pliver	intermediate	E4Pliver_1:2:3:4	use	C4H9O7P 			
+F6Pliver	intermediate	F6Pliver_1:2:3:4:5:6	use	C6H13O9P 			
+FBPliver	intermediate	FBPliver_1:2:3:4:5:6	use	C6H14O12P2			
+Fumliver	intermediate	Fumliver_1:2:3:4	use	C4H4O4			
+G6Pliver	intermediate	G6Pliver_1:2:3:4:5:6	use	C6H13O9P 			
+GAPliver	intermediate	GAPliver_1:2:3	use	C3H7O6P 			
+Glnliver	intermediate	Glnliver_1:2:3:4:5	use	C5H10N2O3			
+Gluliver	intermediate	Gluliver_1:2:3:4:5	use	C5H9NO4			
+Lacliver	intermediate	Lacliver_1:2:3	use	C3H6O3			
+Ru5Pliver	intermediate	Ru5Pliver_1:2:3:4:5	use	C5H11O8P			
+S7Pliver	intermediate	S7Pliver_1:2:3:4:5:6:7	use	C7H15O10P 			
+Serliver	intermediate	Serliver_1:2:3	use	C3H7NO3			
+Sucliver	intermediate	Sucliver_1:2:3:4	use	C4H6O4			
+PEPliver	intermediate	PEPliver_1:2:3	use	C3H5O6P			
+Glcliver	intermediate	Glcliver_1:2:3:4:5:6	use	C6H12O6			
+AcAspliver	intermediate	AcAspliver_1:2:3:4:5:6	use	C6H9NO5			
+Uridineliver	intermediate	Uridineliver_1:2:3:4:5:6:7:8:9	use	C9H12N2O6			
+UMPliver	intermediate	UMPliver_1:2:3:4:5:6:7:8:9	use	C9H13N2O9P			
+Pyrlung	intermediate	Pyrlung_1:2:3	use	C3H4O3			
+Mallung	intermediate	Mallung_1:2:3:4	use	C4H6O5			
+Citlung	intermediate	Citlung_1:2:3:4:5:6	use	C6H8O7			
+Alalung	intermediate	Pyrlung_1:2:3	use	C3H7NO2			
+Asplung	intermediate	Asplung_1:2:3:4	use	C4H7NO4			
+aKGlung	intermediate	aKGlung_1:2:3:4:5	use	C5H6O5			
+m3PGlung	intermediate	m3PGlung_1:2:3	use	C3H7O7P			
+DHAPlung	intermediate	DHAPlung_1:2:3	use	C3H7O6P 			
+E4Plung	intermediate	E4Plung_1:2:3:4	use	C4H9O7P 			
+F6Plung	intermediate	F6Plung_1:2:3:4:5:6	use	C6H13O9P 			
+FBPlung	intermediate	FBPlung_1:2:3:4:5:6	use	C6H14O12P2			
+Fumlung	intermediate	Fumlung_1:2:3:4	use	C4H4O4			
+G6Plung	intermediate	G6Plung_1:2:3:4:5:6	use	C6H13O9P 			
+GAPlung	intermediate	GAPlung_1:2:3	use	C3H7O6P 			
+Glnlung	intermediate	Glnlung_1:2:3:4:5	use	C5H10N2O3			
+Glulung	intermediate	Glulung_1:2:3:4:5	use	C5H9NO4			
+Laclung	intermediate	Laclung_1:2:3	use	C3H6O3			
+Ru5Plung	intermediate	Ru5Plung_1:2:3:4:5	use	C5H11O8P			
+S7Plung	intermediate	S7Plung_1:2:3:4:5:6:7	use	C7H15O10P 			
+Serlung	intermediate	Serlung_1:2:3	use	C3H7NO3			
+Suclung	intermediate	Suclung_1:2:3:4	use	C4H6O4			
+PEPlung	intermediate	PEPlung_1:2:3	use	C3H5O6P			
+Glclung	intermediate	Glclung_1:2:3:4:5:6	use	C6H12O6			
+AcAsplung	intermediate	AcAsplung_1:2:3:4:5:6	use	C6H9NO5			
+Uridinelung	intermediate	Uridinelung_1:2:3:4:5:6:7:8:9	use	C9H12N2O6			
+UMPlung	intermediate	UMPlung_1:2:3:4:5:6:7:8:9	use	C9H13N2O9P			
+Pyrbrain	intermediate	Pyrbrain_1:2:3	use	C3H4O3			
+Malbrain	intermediate	Malbrain_1:2:3:4	use	C4H6O5			
+Citbrain	intermediate	Citbrain_1:2:3:4:5:6	use	C6H8O7			
+Alabrain	intermediate	Pyrbrain_1:2:3	use	C3H7NO2			
+Aspbrain	intermediate	Aspbrain_1:2:3:4	use	C4H7NO4			
+aKGbrain	intermediate	aKGbrain_1:2:3:4:5	use	C5H6O5			
+m3PGbrain	intermediate	m3PGbrain_1:2:3	use	C3H7O7P			
+DHAPbrain	intermediate	DHAPbrain_1:2:3	use	C3H7O6P 			
+E4Pbrain	intermediate	E4Pbrain_1:2:3:4	use	C4H9O7P 			
+F6Pbrain	intermediate	F6Pbrain_1:2:3:4:5:6	use	C6H13O9P 			
+FBPbrain	intermediate	FBPbrain_1:2:3:4:5:6	use	C6H14O12P2			
+Fumbrain	intermediate	Fumbrain_1:2:3:4	use	C4H4O4			
+G6Pbrain	intermediate	G6Pbrain_1:2:3:4:5:6	use	C6H13O9P 			
+GAPbrain	intermediate	GAPbrain_1:2:3	use	C3H7O6P 			
+Glnbrain	intermediate	Glnbrain_1:2:3:4:5	use	C5H10N2O3			
+Glubrain	intermediate	Glubrain_1:2:3:4:5	use	C5H9NO4			
+Lacbrain	intermediate	Lacbrain_1:2:3	use	C3H6O3			
+Ru5Pbrain	intermediate	Ru5Pbrain_1:2:3:4:5	use	C5H11O8P			
+S7Pbrain	intermediate	S7Pbrain_1:2:3:4:5:6:7	use	C7H15O10P 			
+Serbrain	intermediate	Serbrain_1:2:3	use	C3H7NO3			
+Sucbrain	intermediate	Sucbrain_1:2:3:4	use	C4H6O4			
+PEPbrain	intermediate	PEPbrain_1:2:3	use	C3H5O6P			
+Glcbrain	intermediate	Glcbrain_1:2:3:4:5:6	use	C6H12O6			
+AcAspbrain	intermediate	AcAspbrain_1:2:3:4:5:6	use	C6H9NO5			
+Uridinebrain	intermediate	Uridinebrain_1:2:3:4:5:6:7:8:9	use	C9H12N2O6			
+UMPbrain	intermediate	UMPbrain_1:2:3:4:5:6:7:8:9	use	C9H13N2O9P			
+GlcPeri	intermediate	GlcPeri_1:2:3:4:5:6	use	C6H12O6			
+LacPeri	intermediate	LacPeri_1:2:3	use	C3H6O3			
+Uridine	intermediate	Uridine_1:2:3:4:5:6:7:8:9	use	C9H12N2O6			
+//End							
