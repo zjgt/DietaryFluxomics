@@ -10,7 +10,7 @@ The main changes include the following:
 6) ALL data required to reproduce a dietary fluxomics manuscript under review.
 
 
-Below are the original readme file from the mfapy repository.
+Below is the original readme file from the mfapy repository.
 
 ================================================
 mfapy: A Python toolbox for 13C-metabolic flux analysis
