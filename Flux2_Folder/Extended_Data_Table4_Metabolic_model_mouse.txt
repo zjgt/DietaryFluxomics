@@ -1,0 +1,208 @@
+#-------------------------------------------------------------------------------														
+# Name:        Extended_Data_Table5_Metabolic_model_mouse.txt														
+#              														
+#														
+# Author:      Suneng Fu														
+#														
+# Created:     06/25/2024														
+# Copyright:   (c) Suneng_Fu 2025														
+# Licence:     MIT license														
+#-------------------------------------------------------------------------------														
+//Reactions														
+r001_SubsGlc	SubsGlc --> Glc	SubsGlc --> Glc	ABCDEF --> ABCDEF	(kegg:SubsGlc)	0	1000								
+r002_SubsLac	SubsLac --> Lac	SubsLac --> Lac	ABC --> ABC	(kegg:SubsLac)	0	300								
+r003_SubsGlycogen	SubsGlycogen --> F6P	SubsGlycogen --> F6P	ABCDEF --> ABCDEF	(kegg:Subsglycogen)	0	10								
+r004_SubsAcCOAmit	SubsAcCOAmit --> AcCOAmit	SubsAcCOAmit --> AcCOAmit	AB --> AB	(kegg:SubsAcCOAmit)	0	20	 	 	 	 	 	 	 	 
+r005_SubsGly	SubsGly --> DHAP + {0.6} NADH	SubsGly --> DHAP	ABC --> ABC	(kegg:SubsGly)	0	10	 	 	 	 	 	 		
+r006_SubsGln	SubsGln --> Gln	SubsGln --> Gln	ABCDE --> ABCDE	(kegg:SubsGln)	0	10								
+r007_SubsBCAA	SubsBCAA --> BCAA	SubsBCAA --> BCAA	ABCDE --> ABCDE	(kegg:SubsBCAA)	0	10								
+r008_SubsAla	SubsAla --> Ala	SubsAla --> Ala	ABC --> ABC	(kegg:SubsAla)	0	10								
+r009_SubsAcAsp	SubsAcAsp --> Asp + AcCOAcyt	SubsAcAsp --> Asp + AcCOAcyt	ABCDEF --> ABCD+ FE	(kegg:SubsAcAsp)	0	10								
+r010_SubsR5P	SubsR5P --> R5P	SubsR5P --> R5P	ABCDE --> ABCDE	(kegg:SubsR5P)	0	10								
+r011_CO2_out	CO2in --> CO2Ex	CO2in --> CO2Ex	A --> A	(kegg:CO2_ex)	0	500								
+r012_Glc_ex	Glc --> GlcEx	nd	nd	(kegg:Glc_Ex)	0	80								
+r021_hk	Glc + ATP --> F6P	Glc --> F6P	ABCDEF --> ABCDEF	(kegg:R02848)	0	200								
+r022_g6pc	F6P --> Glc	F6P --> Glc	ABCDEF --> ABCDEF	(kegg:R00303)	0	10								
+r023_fba	F6P --> DHAP + GAP	F6P --> DHAP + GAP	ABCDEF --> ABC + DEF	(kegg:R01068f)	0	1000								
+r024_fba	DHAP + GAP --> F6P	DHAP + GAP --> F6P	ABC + DEF --> ABCDEF	(kegg:R01068r)	0	500								
+r025_tpi	DHAP --> GAP	DHAP --> GAP	ABC --> CBA	(kegg:R01015f)	0	500								
+r026_tpi	GAP --> DHAP	GAP --> DHAP	ABC --> CBA	(kegg:R01015r)	0	500								
+r027_pk	GAP --> Pyr + ATP	GAP --> Pyr	ABC --> ABC	(kegg:R00200)	0	200								
+r028_ldh	Pyr + NADH --> Lac	Pyr --> Lac	ABC --> ABC	(kegg:R00703f)	0	1000								
+r029_ldh	Lac --> Pyr + NADH	Lac --> Pyr	ABC --> ABC	(kegg:R00703r)	0	1000								
+r030_Lac_ex	Lac --> LacEx	nd	nd	(kegg:Lac_ex)	0	200								
+r031_pyrdh	Pyr --> AcCOAmit + CO2in + NADH	Pyr --> AcCOAmit + CO2in	ABC --> BC + A	(kegg:R01196)	0	500								
+r032_cs	Oxa + AcCOAmit  --> Cit	Oxa + AcCOAmit --> Cit	ABCD + EF --> DCBFEA	(kegg:R00351)	0	500								
+r033_idh	Cit --> aKG + CO2in + NADH	Cit --> aKG + CO2in	ABCDEF --> ABCDE + F	(kegg:R00709f)	0	500								
+r034_idh	aKG + CO2in + NADH --> Citcyt	aKG + CO2in --> Citcyt	ABCDE + F --> ABCDEF	(kegg:R00709r)	0	500								
+r035_akgdh	aKG --> Suc + CO2in + ATP + NADH	aKG --> Suc + CO2in	ABCDE --> EDCB + A	(kegg:R01197)	0	500								
+r037_sdh	Suc-->Fum+{0.6}NADH	Suc-->Fum	ABCD --> ABCD	(kegg:R02164f)	0	500								
+r038_sdh	Fum+{0.6}NADH-->Suc	Fum-->Suc	ABCD --> ABCD	(kegg:R02164r)	0	500								
+r039_fh	Fum-->Mal	Fum-->Mal	ABCD --> ABCD	(kegg:R01082f)	0	500								
+r040_fh	Mal-->Fum	Mal-->Fum	ABCD --> ABCD	(kegg:R01082r)	0	500								
+r041_mdh	Mal --> Oxa+NADH	Mal --> Oxa	ABCD --> ABCD	(kegg:R00343f)	0	500								
+r042_mdh	Oxa+NADH --> Mal	Oxa --> Mal	ABCD --> ABCD	(kegg:R00343r)	0	500								
+r043_mdh_cyt	Malcyt --> Oxacyt + NADH	Malcyt --> Oxacyt	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000								
+r044_mdh_cyt	Oxacyt + NADH --> Malcyt	Oxacyt --> Malcyt	ABCD --> ABCD	(kegg:OXA_cyt)	0	1000								
+r045_MAL_ex	Mal + Asp --> Malcyt + Aspmit	Mal + Asp --> Malcyt + Aspmit	ABCD + EFGH --> ABCD + EFGH	(kegg:MAL_cyt)	0	1000								
+r046_MAL_ex	Malcyt + Aspmit --> Mal + Asp	Malcyt + Aspmit --> Mal + Asp	ABCD + EFGH --> ABCD + EFGH	(kegg:MAL_cyt)	0	1000								
+r047_pc	Pyr + CO2in + ATP --> Oxa	Pyr + CO2in --> Oxa	ABC + D --> ABCD	(kegg:R00344)	0	500								
+r048_mae	Mal --> Pyr + CO2in + NADPH	Mal --> Pyr + CO2in	ABCD --> ABC + D	(kegg:R00216)	0	500								
+r049_mae_cyt	Malcyt --> Pyr + CO2in + NADPH	Malcyt --> Pyr + CO2in	ABCD --> ABC + D	(kegg:R00216)	0	500								
+r051_ATPx	ATP --> ATPex	nd	nd	(kegg:ATP)	0	1000								
+r052_OXPHOS	NADH -->{2.3}ATP	nd	nd	(kegg:NADH)	0	1000								
+r053_NADPHx	NADPH --> NADPHex	nd	nd	(kegg:NADPH)	0	1000								
+r054_Cit_ex	Cit + Malcyt --> Citcyt + Mal	Cit + Malcyt --> Citcyt + Mal	ABCDEF + GHIJ --> ABCDEF + GHIJ	(kegg:Cit_ex)	0	1000								
+r055_acl	Citcyt --> Oxacyt + AcCOAcyt	Cit --> Oxacyt + AcCOAcyt	ABCDEF --> FCBA + ED	(kegg:R00352)	0	200								
+r056_FA_ex	AcCOAcyt + {2}NADPH --> FAEx	nd	nd	(kegg:FA_ex)	0	100								
+r057_pck1	Oxacyt --> GAP +CO2in	Oxacyt --> GAP + CO2in	ABCD --> ABC + D	(kegg: R00431cyto)	0	200								
+r058_pck2	Oxa --> GAP + CO2in	Oxa --> GAP + CO2in	ABCD --> ABC + D	(kegg:R00431mito)	0	500								
+r059_BCAAcat	BCAA --> ProCOA + AcCOAmit	BCAA --> ProCOA + AcCOAmit	ABCDE --> ABE + CD	(kegg:BCAAcatabolism)	0	500								
+r060_pcca	ProCOA + CO2in --> Suc	ProCOA + CO2in --> Suc	ABC + D --> ABCD	(kegg:R01859)	0	50								
+r061_gls	Gln --> Glu	Gln --> Glu	ABCDE --> ABCDE	(kegg:R00256)	0	200								
+r063_gludh	Glu --> aKG + NADPH	Glu --> aKG	ABCDE --> ABCDE	(kegg:R00243f)	0	100								
+r064_gludh	aKG + NADPH --> Glu	aKG --> Glu	ABCDE --> ABCDE	(kegg:R00243r)	0	100								
+r065_glul	Glu --> Gln	Glu --> Gln	ABCDE --> ABCDE	(kegg:R00253))	0	100								
+r067_got	Oxacyt + Glu --> Asp + aKG	Oxacyt + Glu --> Asp + aKG	ABCD + EFGHI --> ABCD + EFGHI	(kegg:R00355)	0	100								
+r068_got	Asp + aKG --> Oxacyt + Glu	Asp + aKG --> Oxacyt + Glu	ABCD + EFGHI --> ABCD + EFGHI	(kegg:R00355)	0	100								
+r069_gotmit	Oxa + Glu --> Aspmit + aKG	Oxa + Glu --> Aspmit + aKG	ABCD + EFGHI --> ABCD + EFGHI	(kegg:R00355)	0	100								
+r070_gotmit	Aspmit + aKG --> Oxa + Glu	Aspmit + aKG --> Oxa + Glu	ABCD + EFGHI --> ABCD + EFGHI	(kegg:R00355)	0	100								
+r071_aat	AcCOAcyt + Asp --> AcAsp	AcCOAcyt + Asp --> AcAsp	AB + CDEF --> CDEFBA	(kegg:R00487)	0	100								
+r073_alt	Pyr + Glu --> Ala + aKG	Pyr + Glu --> Ala + aKG	ABC + DEFGH --> ABC + DEFGH	(kegg:R00258)	0	100								
+r074_alt	Ala + aKG --> Pyr + Glu	Ala + aKG --> Pyr + Glu	ABC + DEFGH --> ABC + DEFGH	(kegg:R00258r)	0	500								
+r075_Ala_ex	Ala --> AlaEx	nd	nd	(kegg:Ala_ex)	0	100								
+r076_g6pdh	F6P --> m6PG + NADPH	F6P --> m6PG	ABCDEF --> ABCDEF	(kegg:R00835)	0	50								
+r077_pgd	m6PG --> Ru5P + CO2in + NADPH	m6PG --> Ru5P + CO2in	ABCDEF --> BCDEF + A	(kegg:R01528)	0	100								
+r079_rpi	Ru5P --> R5P	Ru5P --> R5P	ABCDE --> ABCDE	(kegg:R01056f)	0	100								
+r080_rpi	R5P --> Ru5P	R5P --> Ru5P	ABCDE --> ABCDE	(kegg:R01056r)	0	100								
+r081_rbe	Ru5P --> Xu5P	Ru5P --> Xu5P	ABCDE --> ABCDE	(kegg:R01529f)	0	100								
+r082_rbe	Xu5P --> Ru5P	Xu5P --> Ru5P	ABCDE --> ABCDE	(kegg:R01529r)	0	100								
+r083_tkt1	R5P + Xu5P --> S7P + GAP	R5P + Xu5P --> S7P + GAP	ABCDE + FGHIJ --> FGABCDE + HIJ	(kegg:R01641f)	0	100								
+r084_tkt1	GAP + S7P --> Xu5P + R5P	GAP + S7P --> Xu5P + R5P	ABC + DEFGHIJ --> DEABC + FGHIJ	(kegg:R01641r)	0	100								
+r085_tal	GAP + S7P --> F6P + E4P	GAP + S7P --> F6P + E4P	ABC + DEFGHIJ --> DEFABC + GHIJ	(kegg:R08575f)	0	100								
+r086_tal	E4P + F6P --> S7P + GAP	E4P + F6P --> S7P + GAP	GHIJ + DEFABC --> DEFGHIJ + ABC	(kegg:R08575r)	0	100								
+r087_tkt2	E4P + Xu5P --> F6P + GAP	E4P + Xu5P --> F6P + GAP	ABCD + EFGHI --> EFABCD + GHI	(kegg:R01067f)	0	100								
+r088_tkt2	GAP + F6P --> Xu5P + E4P	GAP + F6P --> Xu5P + E4P	GHI + EFABCD --> EFGHI + ABCD	(kegg:R01067r)	0	100								
+r089_cps1	CO2in --> Urea	CO2in --> Urea	A --> A	(kegg:R00149)	0	10								
+r090_UreaEx	Urea --> UreaEx	nd	nd	(kegg:UreaEx)	0	10								
+r091_G6P_BIO	F6P --> G6PBiomass	nd	nd	(kegg:BiomassG6P)	0	20								
+r092_DHAP_BIO	DHAP --> DHAPBiomass	nd	nd	(kegg:BiomassDHAP)	0	10								
+r093_BCAA_BIO	BCAA --> BCAABiomass	nd	nd	(kegg:BiomassBCAA)	0	10								
+r094_Ala_BIO	Ala --> AlaBiomass	nd	nd	(kegg:BiomassAla)	0	10								
+r095_AcAsp_BIO	AcAsp --> AcAspBiomass	nd	nd	(kegg:BiomassAcAsp)	0	100								
+r096_Glu_BIO	Glu --> GluBiomass	nd	nd	(kegg:BiomassGlu)	0	10								
+r097_Gln_BIO	Gln --> GlnBiomass	nd	nd	(kegg:BiomassGln)	0	10								
+r098_aKG_BIO	aKG --> aKGBiomass	nd	nd	(kegg:BiomassaKG)	0	10								
+r099_Suc_BIO	Suc --> SucBiomass	nd	nd	(kegg:BiomassSuc)	0	2								
+r100_R5P_BIO	R5P --> R5PBiomass	nd	nd	(kegg:BiomassR5P)	0	10								
+#														
+#Name_of_intermediate{\t}carbon_number														
+#														
+//Metabolites														
+SubsGlc	6	no	carbonsource	no	(SubsGlc)	0	300							
+SubsGlycogen	6	no	carbonsource	no	(SubsGlycogen)	0	100							
+SubsLac	3	no	carbonsource	no	(SubsLac)	0	300							
+SubsAla	3	no	carbonsource	no	(SubsAla)	0	300							
+SubsAcAsp	6	no	carbonsource	no	(SubsAcAsp)	0	300							
+SubsGly	3	no	carbonsource	no	(kegg:SubsGly)	0	300							
+SubsGln	5	no	carbonsource	no	(SubsGln)	0	300							
+SubsBCAA	5	no	carbonsource	no	(SubsBCAA)	0	300							
+SubsAcCOAmit	2	no	carbonsource	no	(kegg:SubsAcCOA))	0	300							
+SubsR5P 	5	no	carbonsource	no	(kegg:SubsAcCOA))	0	300							
+AcAsp	6	no	no	no	(kegg:C12270)	0	300							
+AcCOAcyt	2	no	no	no	(kegg:C00024)	0	300							
+AcCOAmit	2	no	no	no	(kegg:C00024)	0	300							
+aKG	5	no	no	no	(kegg:C00026)	0	300							
+Ala	3	no	no	no	(kegg:C00041)	0	300							
+Asp	4	no	no	no	(kegg:C00049)	0	300							
+Aspmit	4	no	no	no	(kegg:C00049)	0	300							
+ATP	0	no	no	no	(kegg:C00002)	0	300							
+BCAA	5	no	no	no	(kegg:BCAA)	0	300							
+Cit	6	no	no	no	(kegg:C00158)	0	300							
+Citcyt	6	no	no	no	(kegg:C00158)	0	300							
+CO2in	1	no	no	no	(kegg:CO2in)	0	300							
+DHAP	3	no	no	no	(kegg:C00111)	0	300							
+Fum	4	symmetry	no	no	(kegg:C00122)	0	300							
+F6P	6	no	no	no	(kegg:C00092)	0	300							
+GAP	3	no	no	no	(kegg:C00118)	0	300							
+Glc	6	no	no	no	(kegg:C00031)	0	300							
+Gln	5	no	no	no	(kegg:C00064)	0	300							
+Glu	5	no	no	no	(kegg:C00025)	0	300							
+Lac	3	no	no	no	(kegg:C00186)	0	300							
+Mal	4	no	no	no	(kegg:C00149)	0	300							
+Malcyt	4	no	no	no	(kegg:C00149)	0	300							
+NADH	0	no	no	no	(kegg:C00004)	0	300							
+NADPH	0	no	no	no	(kegg:C00005)	0	300							
+Oxa	4	no	no	no	(kegg:C00036)	0	300							
+Oxacyt	4	no	no	no	(kegg:C00036)	0	300							
+ProCOA	3	no	no	no	(kegg:C00100)	0	300							
+Pyr	3	no	no	no	(kegg:C00022)	0	300							
+Suc	4	symmetry	no	no	(kegg:C00042)	0	300							
+Urea	1	no	no	no	(kegg:C00086)	0	300							
+E4P	4	no	no	no	(kegg:C00279)	0	300							
+m6PG	6	no	no	no	(kegg:C00345)	0	300							
+R5P	5	no	no	no	(kegg:C00117)	0	300							
+Ru5P	5	no	no	no	(kegg:C00199)	0	300							
+S7P	7	no	no	no	(kegg:C05382)	0	300							
+Xu5P	5	no	no	no	(kegg:C00231)	0	300							
+AlaBiomass	3	no	no	excreted	(AlaBiomass)	0	300							
+AcAspBiomass	6	no	no	excreted	(AcAspBiomass)	0	300							
+BCAABiomass	5	no	no	excreted	(BCAABiomass)	0	300							
+DHAPBiomass	3	no	no	excreted	(DHAPBiomass)	0	300							
+G6PBiomass	6	no	no	excreted	(G6PBiomass)	0	300							
+GluBiomass	5	no	no	excreted	(GluBiomass)	0	300							
+GlnBiomass	5	no	no	excreted	(GlnBiomass)	0	300							
+R5PBiomass	5	no	no	excreted	(R5PBiomass)	0	10							
+aKGBiomass	5	no	no	excreted	(aKGBiomass)	0	10							
+SucBiomass	4	no	no	excreted	(SucBiomass)	0	10							
+ATPex	0	no	no	excreted	(ATPex)	0	300							
+AlaEx	3	no	no	excreted	(AlaEx)	0	300							
+CO2Ex	1	no	no	excreted	(CO2Ex)	0	300							
+FAEx	16	no	no	excreted	(FAEx)	0	300							
+GlcEx	6	no	no	excreted	(GlcEx)	0	300							
+LacEx	3	no	no	excreted	(LacEx)	0	300							
+NADPHex	0	no	no	excreted	(NADPHex)	0	300							
+UreaEx	1	no	no	excreted	(UreaEx)	0	300							
+#														
+"#List of reversible reactions, ID, forward, reverse"														
+#														
+//Reversible_reactions														
+ALT	r073_alt	r074_alt	(kegg:R00258)	-1000	1000									
+GOT	r067_got	r068_got	(kegg:R00355)	-1000	1000									
+GOTMIT	r069_gotmit	r070_gotmit	(kegg:R00355)	-1000	1000									
+GLUDH	r063_gludh	r064_gludh	(kegg:R00243)	-1000	1000									
+FBA	r023_fba	r024_fba	(kegg:R01068)	-1000	1000									
+TPI	r025_tpi	r026_tpi	(kegg:R01015)	-1000	1000									
+LDH	r028_ldh	r029_ldh	(kegg:R00703)	-1000	1000									
+IDH	r033_idh	r034_idh	(kegg:R00709)	-1000	1000									
+SDH	r037_sdh	r038_sdh	(kegg:R02164)	-1000	1000									
+FH	r039_fh	r040_fh	(kegg:R01082)	-1000	1000									
+MDH	r041_mdh	r042_mdh	(kegg:R00342)	-1000	1000									
+MDHcyt	r043_mdh_cyt	r044_mdh_cyt	(kegg:MDHcyt)	-1000	1000									
+MALex	r045_MAL_ex	r046_MAL_ex	(kegg:MDHex)	-1000	1000									
+RBE	r081_rbe	r082_rbe	(kegg:R01529)	-1000	1000									
+RPI	r079_rpi	r080_rpi	(kegg:R01056)	-1000	1000									
+TAL	r085_tal	r086_tal	(kegg:R08575)	-1000	1000									
+TKT1	r083_tkt1	r084_tkt1	(kegg:R01641)	-1000	1000									
+TKT2	r087_tkt2	r088_tkt2	(kegg:R01067)	-1000	1000									
+GS	r091_G6P_BIO	r003_SubsGlycogen	(kegg:R01015)	-10	100									
+R5P	r100_R5P_BIO	r010_SubsR5P	(kegg:R5Pbalance)	-10	10									
+#														
+#List of Target compound whose MDV are generarted by the calmdv function.														
+#														
+//Target_fragments														
+Ala	intermediate	Ala_1:2:3	use	C3H7NO2										
+Asp	intermediate	Asp_1:2:3:4	use	C4H7NO4										
+Cit	intermediate	Cit_1:2:3:4:5:6	use	C6H8O7										
+Fum	intermediate	Fum_1:2:3:4	use	C4H4O4										
+F6P	intermediate	F6P_1:2:3:4:5:6	use	C6H13O9P 										
+GAP	intermediate	GAP_1:2:3	use	C3H7O6P 										
+Gln	intermediate	Gln_1:2:3:4:5	use	C5H10N2O3										
+Glu	intermediate	Glu_1:2:3:4:5	use	C5H9NO4										
+Lac	intermediate	Lac_1:2:3	use	C3H6O3										
+Mal	intermediate	Mal_1:2:3:4	use	C4H6O5										
+Pyr	intermediate	Pyr_1:2:3	use	C3H4O3										
+Ru5P	intermediate	Ru5P_1:2:3:4:5	use	C5H11O8P										
+S7P	intermediate	S7P_1:2:3:4:5:6:7	use	C7H15O10P 										
+Suc	intermediate	Suc_1:2:3:4	use	C4H6O4										
+//End														
