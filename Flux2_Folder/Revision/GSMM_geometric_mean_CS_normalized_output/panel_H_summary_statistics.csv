@@ -1,0 +1,9 @@
+Pathway,Mean,Median,SD,Min,Max,N
+Glycolysis,0.107,0.143,0.219,-0.420,0.607,245
+Oxidative PPP,-0.075,-0.103,0.193,-0.568,0.671,245
+Non oxidative PPP,-0.087,-0.106,0.179,-0.598,0.690,245
+Lactate Dehydrogenase,0.276,0.321,0.265,-0.424,0.949,245
+Pyruvate Dehydrogenase,0.006,0.026,0.131,-0.447,0.414,245
+TCA Cycle,0.071,0.066,0.138,-0.357,0.603,245
+Fatty Acid Oxidation,-0.022,-0.089,0.166,-0.406,0.494,245
+Fatty Acid Synthesis,-0.098,-0.096,0.182,-0.500,0.801,245

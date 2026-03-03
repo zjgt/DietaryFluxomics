@@ -1,0 +1,9 @@
+Pathway,Tissue,Capacity
+Glycolysis,TE,0.41979735421457187
+Oxidative PPP,VF,0.23645190079321782
+Non oxidative PPP,VF,0.1583994980201631
+Lactate Dehydrogenase,TE,0.9299083840526009
+Pyruvate Dehydrogenase,AD,0.127294759420822
+TCA Cycle,KD,0.5019812311884616
+Fatty Acid Oxidation,LV,0.4241613262712901
+Fatty Acid Synthesis,VF,0.1824321710970707
