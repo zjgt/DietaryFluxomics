@@ -1,0 +1,9 @@
+Pathway,Tissue,Capacity
+Glycolysis,Gas,0.6912293628412374
+Oxidative PPP,BAT,0.706056883335096
+Non oxidative PPP,BAT,0.9073377302952611
+Lactate Dehydrogenase,TE,0.9807190976316488
+Pyruvate Dehydrogenase,BAT,0.8884992310117124
+TCA Cycle,BAT,0.887125084222587
+Fatty Acid Oxidation,BAT,0.8651763807337558
+Fatty Acid Synthesis,SQ,0.6713071378454822
